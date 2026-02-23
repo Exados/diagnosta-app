@@ -1,39 +1,39 @@
 [
   {
     "id": 1,
-    "module": "Przepisy",
-    "text": "Kiedy należy wykonać badanie okresowe pojazdu osobowego po pierwszej rejestracji?",
+    "module": "Podstawa",
+    "text": "Minimalna grubość bieżnika ?",
     "choices": {
-      "A": "Po 1 roku, potem co rok",
-      "B": "Po 3 latach, potem po 2 latach, potem co rok",
-      "C": "Po 5 latach, potem co 2 lata"
+      "A": "1.6mm",
+      "B": "3mm",
+      "C": "2mm"
     },
-    "correct": "B",
-    "explanation": "Standardowo: 3 lata -> 2 lata -> co 1 rok (dla pojazdu osobowego)."
+    "correct": "A",
+    "explanation": "Według ustawy 1.6mm"
   },
   {
     "id": 2,
-    "module": "Diagnostyka",
-    "text": "Co oznacza usterka zagrażająca bezpieczeństwu w badaniu technicznym?",
+    "module": "ADR",
+    "text": "Naczepa FL, w której przewożona jest benzyna, może być łączona z pojazdem:",
     "choices": {
-      "A": "Nie ma wpływu na bezpieczeństwo, tylko na komfort",
-      "B": "Może mieć wpływ, ale pojazd może jechać bez ograniczeń",
-      "C": "Stwarza bezpośrednie zagrożenie dla bezpieczeństwa ruchu"
+      "A": "FL lub AT",
+      "B": "FL",
+      "C": "AT lub OX"
     },
-    "correct": "C",
-    "explanation": "Usterka niebezpieczna = bezpośrednie zagrożenie."
+    "correct": "B",
+    "explanation": "ADR cz.9, Dział 7.4"
   },
   {
     "id": 3,
-    "module": "Diagnostyka",
-    "text": "Minimalna grubość bieżnika ?",
+    "module": "BUS100",
+    "text": "Minimalna grubość bieżnika dla autobusu o dopuszczalnej prędkości do 100km/h?",
     "choices": {
       "A": "1.6mm",
       "B": "3",
       "C": "2"
     },
-    "correct": "A",
-    "explanation": "Według ustawy 1.6mm"
+    "correct": "B",
+    "explanation": "Według ustawy 3mm"
   },
   {
   "id": 4,
@@ -46,5 +46,53 @@
   },
   "correct": "B",
   "explanation": "bo tak"
+},
+{
+  "id": 5,
+  "module": "BUS100",
+  "text": "Stosunek mocy maksymalnej netto dla autobusu o dopuszczalnej prędkości do 100km/h do DMC ma wynosić najmniej:",
+  "choices": {
+    "A": "9 kW/t",
+    "B": "11KM/t",
+    "C": "11kW/t"
+  },
+  "correct": "C",
+  "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 1"
+},
+{
+  "id": 6,
+  "module": "BUS100",
+  "text": "Wysokość siedzeń w autobusie o dopuszczalnej prędkości do 100km/h w ostatnim rzędzie ma wynosić:",
+  "choices": {
+    "A": "650mm",
+    "B": "560mm",
+    "C": "600mm"
+  },
+  "correct": "B",
+  "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 4, pkt. 5"
+},
+{
+  "id": 7,
+  "module": "GAZY",
+  "text": "Zabrania się instalowania zbiorników w:",
+  "choices": {
+    "A": "tylnej części pojazdu",
+    "B": "pod spodem pojazdu",
+    "C": "w przedniej części pojazdu"
+  },
+  "correct": "C",
+  "explanation": "Warunki techniczne 4 ust. 8 załącznika nr 9"
+},
+{
+  "id": 8,
+  "module": "IrejSkierowane",
+  "text": "Ciągnik rolniczy marki SAM podlega badaniom okresowym w następujących terminach:",
+  "choices": {
+    "A": "3 lata od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
+    "B": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
+    "C": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie co 6 miesięcy"
+  },
+  "correct": "A",
+  "explanation": "Prawo o ruchu drogowym art. 81 ust. 7"
 }
 ]
