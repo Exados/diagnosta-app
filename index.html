@@ -59,9 +59,9 @@
         </div>
 
         <div id="learnCard" class="card"></div>
-        <div style="margin-top: 15px">
-          <button id="learnNext" class="btn">Następne pytanie</button>
-        </div>
+<div class="learnNextWrap">
+  <button id="learnNext" class="btn">Następne pytanie</button>
+</div>
       </section>
 
       <!--PYTANIA OPISOWE-->
@@ -78,6 +78,15 @@
       <section id="view-test" class="view hidden">
         <div class="viewHeader">
           <h2>Test (30 pytań)</h2>
+          <p class="testIntro">
+  Wybierz moduł i kliknij <b>Start</b>. Test składa się z <b>30 pytań</b>
+  (lub mniej, jeśli w module jest mniej pytań).
+  Po kliknięciu odpowiedzi przechodzisz automatycznie do kolejnego pytania.
+  Na górze widzisz pasek postępu.
+  Po zakończeniu zobaczysz wynik i podsumowanie.
+  <br /><br />
+  <b>Reset</b> przerywa test i wraca do ekranu startowego.
+</p>
           <div class="row">
             <label class="muted" for="testModule">Moduł:</label>
             <select id="testModule" class="select"></select>

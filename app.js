@@ -280,10 +280,26 @@ function renderDocuments() {
     const el = document.createElement("button");
     el.type = "button";
     el.className = "knowledgeItem"; // używamy Twojego stylu kafelków
+    const thumb =
+      Array.isArray(d.images) && d.images.length
+        ? d.images[0]
+        : d.image
+          ? d.image
+          : "";
+
     el.innerHTML = `
-      <h3 style="margin:0 0 6px 0;">${escapeHtml(d.title || "")}</h3>
-      <p class="muted" style="margin:0;">Kliknij, aby otworzyć</p>
-    `;
+  <div class="docTile">
+    ${
+      thumb
+        ? `<img class="docTileThumb" src="${escapeHtml(thumb)}" alt="${escapeHtml(d.title || "Dokument")}" loading="lazy">`
+        : `<div class="docTileThumb placeholder" aria-hidden="true"></div>`
+    }
+    <div class="docTileText">
+      <h3 class="docTileTitle">${escapeHtml(d.title || "")}</h3>
+      <p class="muted docTileSub">Kliknij, aby otworzyć</p>
+    </div>
+  </div>
+`;
     el.addEventListener("click", () => openDocumentTopic(d.id));
     host.appendChild(el);
   });
@@ -732,7 +748,9 @@ function buildQuestionHtml(q, { mode }) {
   if (!q) return `<p class="muted">Brak pytania.</p>`;
 
   const expl = q.explanation
-    ? `<p class="muted" id="expl" style="display:none">${escapeHtml(q.explanation)}</p>`
+    ? `<p class="muted expl" id="expl" style="visibility:hidden">
+       ${escapeHtml(q.explanation)}
+     </p>`
     : "";
 
   return `
@@ -767,7 +785,7 @@ function wireAnswerButtons(host, q, { mode }) {
           if (letter === chosen && chosen !== q.correct) b.classList.add("bad");
         });
         const expl = host.querySelector("#expl");
-        if (expl) expl.style.display = "block";
+        if (expl) expl.style.visibility = "visible";
         return;
       }
 
@@ -861,6 +879,7 @@ function initAutoHideHeader() {
     .then(() => {
       setView("knowledge");
       initAutoHideHeader();
+      initImageModal();
     })
     .catch((e) => {
       console.error(e);

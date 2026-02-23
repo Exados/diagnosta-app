@@ -221,7 +221,35 @@ body {
   font-size: 12px;
   margin-right: 8px;
 }
+/* NAUKA – rezerwuj miejsce na wyjaśnienie, żeby przycisk nie "uciekał" */
+#view-learn .expl {
+  display: block; /* ważne: żeby min-height działał */
+  min-height: 72px; /* tyle miejsca rezerwujemy */
+  margin-top: 12px;
+}
 
+/* kiedy JS ukrywa wyjaśnienie, to i tak ma zajmować miejsce */
+#view-learn #expl[style*="display:none"] {
+  visibility: hidden; /* ukryte, ale miejsce zostaje */
+}
+
+/* mobile: zwykle lepiej mniejsze miejsce (bo i tak masz fixed button) */
+@media (max-width: 600px) {
+  #view-learn .expl {
+    min-height: 44px;
+  }
+}
+/* NAUKA – wyjaśnienie zawsze ma miejsce, więc przycisk nie "ucieka" */
+#view-learn .expl {
+  margin-top: 12px;
+  min-height: 72px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#view-learn .expl[style*="visible"] {
+  opacity: 1;
+}
 /* KNOWLEDGE */
 .knowledgeItem {
   text-align: left;
@@ -552,4 +580,83 @@ body {
     font-size: 13px;
     flex: 0 1 auto;
   }
+}
+/* NAUKA — sticky/fixed przycisk na mobile */
+.learnNextWrap {
+  margin-top: 15px; /* desktop zostaje normalnie */
+}
+
+@media (max-width: 600px) {
+  /* zostaw miejsce na przycisk, żeby nie zasłaniał treści */
+  #view-learn {
+    padding-bottom: 92px;
+  }
+
+  .learnNextWrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 12px 18px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(11, 15, 23, 0.9);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 500;
+    margin-top: 0; /* na mobile nie chcemy marginesu w flow */
+  }
+
+  #learnNext {
+    width: 100%;
+  }
+}
+/* Kafelki dokumentów z miniaturką (lista przed kliknięciem) */
+.docTile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.docTileThumb {
+  width: 84px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 0 0 auto;
+}
+
+.docTileThumb.placeholder {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.docTileText {
+  min-width: 0; /* żeby działało ucinanie tekstu */
+}
+
+.docTileTitle {
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.docTileSub {
+  margin: 0;
+}
+
+/* na wąskim ekranie miniaturka trochę mniejsza */
+@media (max-width: 520px) {
+  .docTileThumb {
+    width: 72px;
+    height: 54px;
+  }
+}
+/* TEST — opis "co i jak" */
+.testIntro {
+  margin: 0;
+  max-width: 760px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
 }
