@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "Na czym polega badanie skuteczności hamowania na stanowisku rolkowym?",
+    "answer": "Badanie polega na pomiarze sił hamowania generowanych przez każde koło podczas hamowania na rolkach pomiarowych. Diagnosta ocenia skuteczność hamowania, różnice sił między stroną lewą i prawą oraz ewentualne nieprawidłowości, takie jak blokowanie kół czy brak równomierności działania układu."
+  },
+  {
+    "id": 2,
+    "question": "Jakie elementy układu kierowniczego podlegają kontroli podczas badania technicznego?",
+    "answer": "Sprawdzeniu podlegają: przekładnia kierownicza, drążki kierownicze, końcówki drążków, sworznie, luzy w połączeniach oraz stan osłon gumowych. Ocenia się również luz całkowity na kierownicy oraz działanie wspomagania."
+  },
+  {
+    "id": 3,
+    "question": "Jak przebiega kontrola numeru VIN podczas badania technicznego?",
+    "answer": "Diagnosta sprawdza zgodność numeru VIN z dokumentami pojazdu, jego czytelność oraz brak śladów ingerencji. Numer powinien być trwały, zgodny z homologacją i umieszczony w miejscu przewidzianym przez producenta."
+  },
+  {
+    "id": 4,
+    "question": "W jaki sposób sprawdzana jest emisja spalin w silniku benzynowym?",
+    "answer": "Pomiar emisji spalin odbywa się przy użyciu analizatora spalin. Sprawdza się poziom tlenku węgla (CO), węglowodorów (HC) oraz współczynnik lambda. Pomiar wykonuje się na biegu jałowym oraz przy podwyższonych obrotach silnika."
+  },
+  {
+    "id": 5,
+    "question": "Jakie dokumenty powinien przedstawić właściciel pojazdu przy badaniu okresowym?",
+    "answer": "Właściciel powinien przedstawić dowód rejestracyjny pojazdu lub pozwolenie czasowe. W niektórych przypadkach wymagane mogą być dodatkowe dokumenty, np. decyzja o montażu instalacji LPG czy zaświadczenia z poprzednich badań."
+  },
+  {
+    "id": 6,
+    "question": "Na czym polega kontrola zawieszenia pojazdu?",
+    "answer": "Kontrola zawieszenia obejmuje sprawdzenie luzów w elementach metalowo-gumowych, stanu amortyzatorów, sprężyn, wahaczy, sworzni oraz łączników stabilizatora. Diagnosta ocenia także ewentualne wycieki i uszkodzenia mechaniczne."
+  },
+  {
+    "id": 7,
+    "question": "Jakie warunki musi spełniać pojazd z instalacją LPG podczas badania technicznego?",
+    "answer": "Instalacja LPG musi posiadać ważną legalizację zbiornika, prawidłowe oznaczenia, szczelność układu oraz poprawne mocowanie elementów. Sprawdza się także dokument potwierdzający homologację instalacji."
+  },
+  {
+    "id": 8,
+    "question": "Kiedy diagnosta może zatrzymać dowód rejestracyjny?",
+    "answer": "Diagnosta zatrzymuje dowód rejestracyjny w przypadku stwierdzenia usterek stwarzających zagrożenie bezpieczeństwa ruchu drogowego lub środowiska. Informacja o zatrzymaniu jest przekazywana do odpowiedniego systemu, a właściciel otrzymuje stosowne zaświadczenie."
+  }
+]

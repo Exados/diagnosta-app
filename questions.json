@@ -4,9 +4,9 @@
     "module": "Podstawa",
     "text": "Minimalna grubość bieżnika ?",
     "choices": {
-      "A": "1.6 mm",
-      "B": "3 mm",
-      "C": "2 mm"
+      "A": "1.6mm",
+      "B": "3mm",
+      "C": "2mm"
     },
     "correct": "A",
     "explanation": "Według ustawy 1.6mm"
@@ -28,72 +28,431 @@
     "module": "BUS100",
     "text": "Minimalna grubość bieżnika dla autobusu o dopuszczalnej prędkości do 100km/h?",
     "choices": {
-      "A": "1.6 mm",
-      "B": "3 mm",
-      "C": "2 mm"
+      "A": "1.6mm",
+      "B": "3",
+      "C": "2"
     },
     "correct": "B",
     "explanation": "Według ustawy 3mm"
   },
   {
-  "id": 4,
-  "module": "BUS100",
-  "text": "Liczba wyjść awaryjnych przy liczbie miejsc dla pasażerów nie większej niż 22 nie może być mniejsza niż ?",
-  "choices": {
-    "A": "2",
-    "B": "3",
-    "C": "4"
+    "id": 4,
+    "module": "BUS100",
+    "text": "Liczba wyjść awaryjnych przy liczbie miejsc dla pasażerów nie większej niż 22 nie może być mniejsza niż ?",
+    "choices": {
+      "A": "2",
+      "B": "3",
+      "C": "4"
+    },
+    "correct": "B",
+    "explanation": "bo tak"
   },
-  "correct": "B",
-  "explanation": "bo tak"
-},
-{
-  "id": 5,
-  "module": "BUS100",
-  "text": "Stosunek mocy maksymalnej netto dla autobusu o dopuszczalnej prędkości do 100km/h do DMC ma wynosić najmniej:",
-  "choices": {
-    "A": "9 kW/t",
-    "B": "11KM/t",
-    "C": "11kW/t"
+  {
+    "id": 5,
+    "module": "BUS100",
+    "text": "Stosunek mocy maksymalnej netto dla autobusu o dopuszczalnej prędkości do 100km/h do DMC ma wynosić najmniej:",
+    "choices": {
+      "A": "9 kW/t",
+      "B": "11KM/t",
+      "C": "11kW/t"
+    },
+    "correct": "C",
+    "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 1"
   },
-  "correct": "C",
-  "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 1"
-},
-{
-  "id": 6,
-  "module": "BUS100",
-  "text": "Wysokość siedzeń w autobusie o dopuszczalnej prędkości do 100km/h w ostatnim rzędzie ma wynosić:",
-  "choices": {
-    "A": "650mm",
-    "B": "560mm",
-    "C": "600mm"
+  {
+    "id": 6,
+    "module": "BUS100",
+    "text": "Wysokość siedzeń w autobusie o dopuszczalnej prędkości do 100km/h w ostatnim rzędzie ma wynosić:",
+    "choices": {
+      "A": "650mm",
+      "B": "560mm",
+      "C": "600mm"
+    },
+    "correct": "B",
+    "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 4, pkt. 5"
   },
-  "correct": "B",
-  "explanation": "Dz. U. z 2024 r. poz. 502 23, ust. 4, pkt. 5"
-},
-{
-  "id": 7,
-  "module": "GAZY",
-  "text": "Zabrania się instalowania zbiorników w:",
-  "choices": {
-    "A": "tylnej części pojazdu",
-    "B": "pod spodem pojazdu",
-    "C": "w przedniej części pojazdu"
+  {
+    "id": 7,
+    "module": "GAZY",
+    "text": "Zabrania się instalowania zbiorników w:",
+    "choices": {
+      "A": "tylnej części pojazdu",
+      "B": "pod spodem pojazdu",
+      "C": "w przedniej części pojazdu"
+    },
+    "correct": "C",
+    "explanation": "Warunki techniczne 4 ust. 8 załącznika nr 9"
   },
-  "correct": "C",
-  "explanation": "Warunki techniczne 4 ust. 8 załącznika nr 9"
-},
-{
-  "id": 8,
-  "module": "IrejSkierowane",
-  "text": "Ciągnik rolniczy marki SAM podlega badaniom okresowym w następujących terminach:",
-  "choices": {
-    "A": "3 lata od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
-    "B": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
-    "C": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie co 6 miesięcy"
+  {
+    "id": 8,
+    "module": "IrejSkierowane",
+    "text": "Ciągnik rolniczy marki SAM podlega badaniom okresowym w następujących terminach:",
+    "choices": {
+      "A": "3 lata od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
+      "B": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
+      "C": "przed upływem 1 roku od dnia pierwszej rejestracji, a następnie co 6 miesięcy"
+    },
+    "correct": "A",
+    "explanation": "Prawo o ruchu drogowym art. 81 ust. 7"
   },
-  "correct": "A",
-  "explanation": "Prawo o ruchu drogowym art. 81 ust. 7"
-}
-
+  {
+    "id": 1001,
+    "module": "TESTOWE",
+    "text": "Podczas badania technicznego pojazdu sprawdzenie luzów w układzie kierowniczym wykonuje się:",
+    "choices": {
+      "A": "Wyłącznie wzrokowo",
+      "B": "Na podnośniku lub szarpakach",
+      "C": "Wyłącznie podczas jazdy próbnej"
+    },
+    "correct": "B",
+    "explanation": "Luzy w układzie kierowniczym sprawdza się na podnośniku lub przy użyciu szarpaków, co pozwala wykryć nadmierne luzy w drążkach i przekładni."
+  },
+  {
+    "id": 1002,
+    "module": "TESTOWE",
+    "text": "Badanie skuteczności hamulca postojowego wykonuje się:",
+    "choices": {
+      "A": "Na stanowisku rolkowym",
+      "B": "Wyłącznie podczas jazdy",
+      "C": "Przy wyłączonym silniku"
+    },
+    "correct": "A",
+    "explanation": "Skuteczność hamulca postojowego sprawdzana jest na stanowisku rolkowym, gdzie mierzone są siły hamowania."
+  },
+  {
+    "id": 1003,
+    "module": "TESTOWE",
+    "text": "Numer VIN pojazdu powinien być:",
+    "choices": {
+      "A": "Trwale naniesiony i czytelny",
+      "B": "Możliwy do usunięcia bez śladu",
+      "C": "Umieszczony wyłącznie na tabliczce znamionowej"
+    },
+    "correct": "A",
+    "explanation": "Numer VIN musi być trwale naniesiony, czytelny i zgodny z dokumentacją pojazdu."
+  },
+  {
+    "id": 1004,
+    "module": "TESTOWE",
+    "text": "Maksymalna masa całkowita pojazdu oznaczona jest w dowodzie rejestracyjnym symbolem:",
+    "choices": {
+      "A": "F.1",
+      "B": "P.1",
+      "C": "S.1"
+    },
+    "correct": "A",
+    "explanation": "Pole F.1 w dowodzie rejestracyjnym oznacza maksymalną masę całkowitą pojazdu."
+  },
+  {
+    "id": 1005,
+    "module": "TESTOWE",
+    "text": "Pomiar emisji spalin w silniku benzynowym obejmuje kontrolę:",
+    "choices": {
+      "A": "Ciśnienia oleju",
+      "B": "Poziomu CO i HC",
+      "C": "Wyłącznie poziomu tlenu"
+    },
+    "correct": "B",
+    "explanation": "Podczas badania mierzy się poziom CO (tlenku węgla), HC (węglowodorów) oraz współczynnik lambda."
+  },
+  {
+    "id": 1006,
+    "module": "TESTOWE",
+    "text": "Diagnosta zatrzymuje dowód rejestracyjny w przypadku:",
+    "choices": {
+      "A": "Braku trójkąta ostrzegawczego",
+      "B": "Usterki zagrażającej bezpieczeństwu",
+      "C": "Braku ubezpieczenia OC"
+    },
+    "correct": "B",
+    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+  },
+  {
+    "id": 1007,
+    "module": "TESTOWE",
+    "text": "Liczba osi pojazdu w dowodzie rejestracyjnym oznaczona jest symbolem:",
+    "choices": {
+      "A": "L",
+      "B": "O.1",
+      "C": "D.3"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+  },
+  {
+    "id": 1008,
+    "module": "TESTOWE",
+    "text": "Pojemność silnika w dowodzie rejestracyjnym oznaczona jest symbolem:",
+    "choices": {
+      "A": "F.2",
+      "B": "P.1",
+      "C": "Q"
+    },
+    "correct": "B",
+    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+  },
+  {
+    "id": 1009,
+    "module": "TESTOWE",
+    "text": "Badanie amortyzatorów wykonuje się:",
+    "choices": {
+      "A": "Wyłącznie wizualnie",
+      "B": "Na stanowisku do badania zawieszenia",
+      "C": "Tylko przy dużej prędkości"
+    },
+    "correct": "B",
+    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+  },
+  {
+    "id": 1010,
+    "module": "TESTOWE",
+    "text": "Homologacja pojazdu potwierdzana jest w dowodzie rejestracyjnym symbolem:",
+    "choices": {
+      "A": "K",
+      "B": "J",
+      "C": "H"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+  },
+  {
+    "id": 1011,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1011. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1012,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1012. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1013,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1013. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1014,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1014. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1015,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1015. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1016,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1016. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1017,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1017. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1018,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1018. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1019,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1019. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1020,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1020. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1021,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1021. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1022,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1022. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1023,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1023. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1024,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1024. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1025,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1025. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1026,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1026. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1027,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1027. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1028,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1028. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1029,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1029. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  },
+  {
+    "id": 1030,
+    "module": "TESTOWE",
+    "text": "Pytanie testowe numer 1030. Wybierz prawidłową odpowiedź.",
+    "choices": {
+      "A": "Odpowiedź A",
+      "B": "Odpowiedź B",
+      "C": "Odpowiedź C"
+    },
+    "correct": "A",
+    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+  }
 ]

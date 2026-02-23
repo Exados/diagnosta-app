@@ -29,6 +29,7 @@ function escapeHtml(str) {
 let QUESTIONS = [];
 let KNOWLEDGE = [];
 let DOCUMENTS = [];
+let OPENQ = [];
 
 // ==============================
 // STANY
@@ -45,39 +46,54 @@ let testState = {
   order: [],
   idx: 0,
   correct: 0,
-  answers: [] // {id, chosen, correct}
+  answers: [], // {id, chosen, correct}
 };
 
 // ==============================
 // ŁADOWANIE DANYCH
 // ==============================
 async function loadData() {
-  const [qRes, kRes, dRes] = await Promise.all([
-  fetch("./questions.json", { cache: "no-store" }),
-  fetch("./knowledge.json", { cache: "no-store" }),
-  fetch("./documents.json", { cache: "no-store" })
-]);
+  const [qRes, kRes, dRes, oqRes] = await Promise.all([
+    fetch("./questions.json", { cache: "no-store" }),
+    fetch("./knowledge.json", { cache: "no-store" }),
+    fetch("./documents.json", { cache: "no-store" }),
+    fetch("./open_questions.json", { cache: "no-store" }),
+  ]);
 
-  if (!qRes.ok) throw new Error("Nie mogę wczytać questions.json (sprawdź nazwę/ścieżkę).");
-  if (!kRes.ok) throw new Error("Nie mogę wczytać knowledge.json (sprawdź nazwę/ścieżkę).");
-  if (!dRes.ok) throw new Error("Nie mogę wczytać documents.json (sprawdź nazwę/ścieżkę).");
+  if (!qRes.ok)
+    throw new Error("Nie mogę wczytać questions.json (sprawdź nazwę/ścieżkę).");
+  if (!kRes.ok)
+    throw new Error("Nie mogę wczytać knowledge.json (sprawdź nazwę/ścieżkę).");
+  if (!dRes.ok)
+    throw new Error("Nie mogę wczytać documents.json (sprawdź nazwę/ścieżkę).");
+  if (!oqRes.ok)
+    throw new Error(
+      "Nie mogę wczytać open_questions.json (sprawdź nazwę/ścieżkę).",
+    );
 
   QUESTIONS = await qRes.json();
   KNOWLEDGE = await kRes.json();
   DOCUMENTS = await dRes.json();
+  OPENQ = await oqRes.json();
 
-  if (!Array.isArray(DOCUMENTS)) throw new Error("documents.json musi zawierać tablicę [].");
-  if (!Array.isArray(QUESTIONS)) throw new Error("questions.json musi zawierać tablicę [].");
-  if (!Array.isArray(KNOWLEDGE)) throw new Error("knowledge.json musi zawierać tablicę [].");
+  if (!Array.isArray(DOCUMENTS))
+    throw new Error("documents.json musi zawierać tablicę [].");
+  if (!Array.isArray(QUESTIONS))
+    throw new Error("questions.json musi zawierać tablicę [].");
+  if (!Array.isArray(KNOWLEDGE))
+    throw new Error("knowledge.json musi zawierać tablicę [].");
+  if (!Array.isArray(OPENQ))
+    throw new Error("open_questions.json musi zawierać tablicę [].");
 
   // Normalizacja / walidacja minimum + moduły
-  QUESTIONS = QUESTIONS
-    .filter(q => q && q.id != null && q.text && q.choices && q.correct)
-    .map(q => ({
-      ...q,
-      correct: String(q.correct).toUpperCase(),
-      module: (q.module && String(q.module).trim()) ? String(q.module).trim() : "Inne"
-    }));
+  QUESTIONS = QUESTIONS.filter(
+    (q) => q && q.id != null && q.text && q.choices && q.correct,
+  ).map((q) => ({
+    ...q,
+    correct: String(q.correct).toUpperCase(),
+    module:
+      q.module && String(q.module).trim() ? String(q.module).trim() : "Inne",
+  }));
 
   learnIndex = 0;
   learnOrder = buildLearnOrder();
@@ -89,8 +105,9 @@ async function loadData() {
 // MODUŁY
 // ==============================
 function getModules() {
-  const mods = Array.from(new Set(QUESTIONS.map(q => q.module)))
-    .sort((a, b) => a.localeCompare(b, "pl"));
+  const mods = Array.from(new Set(QUESTIONS.map((q) => q.module))).sort(
+    (a, b) => a.localeCompare(b, "pl"),
+  );
   return ["ALL", ...mods];
 }
 
@@ -101,10 +118,12 @@ function populateModuleSelects() {
   const modules = getModules();
 
   if (learnSel) {
-    learnSel.innerHTML = modules.map(m => {
-      const label = (m === "ALL") ? "Wszystkie" : m;
-      return `<option value="${escapeHtml(m)}">${escapeHtml(label)}</option>`;
-    }).join("");
+    learnSel.innerHTML = modules
+      .map((m) => {
+        const label = m === "ALL" ? "Wszystkie" : m;
+        return `<option value="${escapeHtml(m)}">${escapeHtml(label)}</option>`;
+      })
+      .join("");
 
     learnSel.value = learnModule;
 
@@ -117,10 +136,12 @@ function populateModuleSelects() {
   }
 
   if (testSel) {
-    testSel.innerHTML = modules.map(m => {
-      const label = (m === "ALL") ? "Wszystkie" : m;
-      return `<option value="${escapeHtml(m)}">${escapeHtml(label)}</option>`;
-    }).join("");
+    testSel.innerHTML = modules
+      .map((m) => {
+        const label = m === "ALL" ? "Wszystkie" : m;
+        return `<option value="${escapeHtml(m)}">${escapeHtml(label)}</option>`;
+      })
+      .join("");
 
     testSel.value = testModule;
 
@@ -132,31 +153,35 @@ function populateModuleSelects() {
 }
 
 function buildLearnOrder() {
-  const pool = (learnModule === "ALL")
-    ? QUESTIONS
-    : QUESTIONS.filter(q => q.module === learnModule);
+  const pool =
+    learnModule === "ALL"
+      ? QUESTIONS
+      : QUESTIONS.filter((q) => q.module === learnModule);
 
-  return shuffle(pool.map(q => q.id));
+  return shuffle(pool.map((q) => q.id));
 }
 
 function buildTestOrder() {
-  const pool = (testModule === "ALL")
-    ? QUESTIONS
-    : QUESTIONS.filter(q => q.module === testModule);
+  const pool =
+    testModule === "ALL"
+      ? QUESTIONS
+      : QUESTIONS.filter((q) => q.module === testModule);
 
   const len = Math.min(TEST_LEN, pool.length);
-  return shuffle(pool.map(q => q.id)).slice(0, len);
+  return shuffle(pool.map((q) => q.id)).slice(0, len);
 }
 
 // ==============================
 // NAWIGACJA (ZAKŁADKI)
 // ==============================
 const tabs = document.querySelectorAll(".tab");
-tabs.forEach(btn => btn.addEventListener("click", () => setView(btn.dataset.view)));
+tabs.forEach((btn) =>
+  btn.addEventListener("click", () => setView(btn.dataset.view)),
+);
 
 function setView(view) {
-  tabs.forEach(t => t.classList.toggle("active", t.dataset.view === view));
-  document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
+  tabs.forEach((t) => t.classList.toggle("active", t.dataset.view === view));
+  document.querySelectorAll(".view").forEach((v) => v.classList.add("hidden"));
   $(`#view-${view}`)?.classList.remove("hidden");
 
   if (view === "knowledge") renderKnowledge();
@@ -164,6 +189,7 @@ function setView(view) {
   if (view === "test") renderTestIdle();
   if (view === "add") initAddTool();
   if (view === "documents") renderDocuments();
+  if (view === "openq") renderOpenQ();
 }
 
 // ==============================
@@ -197,16 +223,16 @@ function renderKnowledge() {
 
 function openKnowledgeTopic(id) {
   // pokaż widok podstrony
-  document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
+  document.querySelectorAll(".view").forEach((v) => v.classList.add("hidden"));
   $("#view-knowledge-topic")?.classList.remove("hidden");
 
   // zakładka "BAZA WIEDZY" nadal aktywna
-  document.querySelectorAll(".tab").forEach(t => {
+  document.querySelectorAll(".tab").forEach((t) => {
     t.classList.toggle("active", t.dataset.view === "knowledge");
   });
 
   const topic =
-    KNOWLEDGE.find(k => String(k.id) === String(id)) ??
+    KNOWLEDGE.find((k) => String(k.id) === String(id)) ??
     KNOWLEDGE[Number(id)] ??
     null;
 
@@ -250,7 +276,7 @@ function renderDocuments() {
     return;
   }
 
-  DOCUMENTS.forEach(d => {
+  DOCUMENTS.forEach((d) => {
     const el = document.createElement("button");
     el.type = "button";
     el.className = "knowledgeItem"; // używamy Twojego stylu kafelków
@@ -265,15 +291,15 @@ function renderDocuments() {
 
 function openDocumentTopic(id) {
   // przełącz widoki
-  document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
+  document.querySelectorAll(".view").forEach((v) => v.classList.add("hidden"));
   $("#view-document-topic")?.classList.remove("hidden");
 
   // aktywuj tab Dokumenty
-  document.querySelectorAll(".tab").forEach(t => {
+  document.querySelectorAll(".tab").forEach((t) => {
     t.classList.toggle("active", t.dataset.view === "documents");
   });
 
-  const doc = DOCUMENTS.find(d => String(d.id) === String(id)) || null;
+  const doc = DOCUMENTS.find((d) => String(d.id) === String(id)) || null;
 
   if (!doc) {
     $("#docTitle").textContent = "Nie znaleziono dokumentu";
@@ -290,26 +316,28 @@ function openDocumentTopic(id) {
   $("#docExplain").textContent = doc.explain || "";
   $("#docDesc").textContent = doc.desc || "";
 
-const imagesWrap = $("#docImages");
-if (imagesWrap) {
-  imagesWrap.innerHTML = "";
+  const imagesWrap = $("#docImages");
+  if (imagesWrap) {
+    imagesWrap.innerHTML = "";
 
-  const imgs = Array.isArray(doc.images)
-    ? doc.images
-    : (doc.image ? [doc.image] : []);
+    const imgs = Array.isArray(doc.images)
+      ? doc.images
+      : doc.image
+        ? [doc.image]
+        : [];
 
-  imgs.forEach(src => {
-    const imgEl = document.createElement("img");
-    imgEl.src = src;
-    imgEl.alt = doc.title || "Dokument";
+    imgs.forEach((src) => {
+      const imgEl = document.createElement("img");
+      imgEl.src = src;
+      imgEl.alt = doc.title || "Dokument";
 
-    imgEl.addEventListener("click", () => {
-      openImageModal(src, doc.title);
+      imgEl.addEventListener("click", () => {
+        openImageModal(src, doc.title);
+      });
+
+      imagesWrap.appendChild(imgEl);
     });
-
-    imagesWrap.appendChild(imgEl);
-  });
-}
+  }
 
   // przycisk powrotu
   const backBtn = $("#docBack");
@@ -318,6 +346,58 @@ if (imagesWrap) {
     backBtn.parentNode.replaceChild(clone, backBtn);
     clone.addEventListener("click", () => setView("documents"));
   }
+}
+
+// ==============================
+// PYTANIA OPISOWE
+// ==============================
+function renderOpenQ() {
+  const host = $("#openqList");
+  if (!host) return;
+
+  host.innerHTML = "";
+
+  if (!OPENQ.length) {
+    host.innerHTML = `<div class="card"><p class="muted">Brak pytań w open_questions.json</p></div>`;
+    return;
+  }
+
+  OPENQ.forEach((item, idx) => {
+    const q = item.question ?? "";
+    const a = item.answer ?? "";
+    const id = item.id ?? idx;
+
+    const el = document.createElement("div");
+    el.className = "openqItem";
+    el.innerHTML = `
+  <button class="openqHead" type="button" aria-expanded="false" data-id="${escapeHtml(id)}">
+    <span class="openqNumber">${idx + 1}</span>
+    <span class="openqQ">${escapeHtml(q)}</span>
+    <span class="openqIcon">▾</span>
+  </button>
+  <div class="openqBody hidden">
+    <div class="openqA">${escapeHtml(a).replaceAll("\n", "<br>")}</div>
+  </div>
+`;
+
+    const head = el.querySelector(".openqHead");
+    const body = el.querySelector(".openqBody");
+    const icon = el.querySelector(".openqIcon");
+
+    head.addEventListener("click", () => {
+      const isHidden = body.classList.contains("hidden");
+
+      // jeśli chcesz, żeby otwarte mogło być tylko jedno naraz — odkomentuj:
+      // document.querySelectorAll(".openqBody").forEach(b => b.classList.add("hidden"));
+      // document.querySelectorAll(".openqHead").forEach(h => h.setAttribute("aria-expanded", "false"));
+
+      body.classList.toggle("hidden");
+      head.setAttribute("aria-expanded", String(isHidden));
+      if (icon) icon.textContent = isHidden ? "▴" : "▾";
+    });
+
+    host.appendChild(el);
+  });
 }
 // ==============================
 // NAUKA
@@ -355,7 +435,8 @@ function renderLearn() {
     return;
   }
 
-  const q = QUESTIONS.find(x => x.id === learnOrder[learnIndex]) || QUESTIONS[0];
+  const q =
+    QUESTIONS.find((x) => x.id === learnOrder[learnIndex]) || QUESTIONS[0];
 
   card.innerHTML = buildQuestionHtml(q, { mode: "learn" });
   wireAnswerButtons(card, q, { mode: "learn" });
@@ -402,9 +483,10 @@ function renderTestIdle() {
   const card = $("#testCard");
   const sum = $("#testSummary");
 
-  const poolSize = (testModule === "ALL")
-    ? QUESTIONS.length
-    : QUESTIONS.filter(q => q.module === testModule).length;
+  const poolSize =
+    testModule === "ALL"
+      ? QUESTIONS.length
+      : QUESTIONS.filter((q) => q.module === testModule).length;
 
   if (meta) meta.textContent = "Kliknij Start, aby rozpocząć test.";
   if (card) {
@@ -428,7 +510,8 @@ function renderTestIdle() {
 function startTest() {
   if (!QUESTIONS.length) {
     const card = $("#testCard");
-    if (card) card.innerHTML = `<p class="muted">Brak pytań w questions.json</p>`;
+    if (card)
+      card.innerHTML = `<p class="muted">Brak pytań w questions.json</p>`;
     return;
   }
 
@@ -441,7 +524,8 @@ function startTest() {
 
   if (!testState.order.length) {
     const card = $("#testCard");
-    if (card) card.innerHTML = `<p class="muted">Brak pytań w wybranym module.</p>`;
+    if (card)
+      card.innerHTML = `<p class="muted">Brak pytań w wybranym module.</p>`;
     const bar = document.querySelector("#testProgressBar");
     if (bar) bar.style.width = "0%";
     return;
@@ -458,7 +542,7 @@ function resetTest() {
 
 function renderTestQuestion() {
   const len = testState.order.length;
-  const q = QUESTIONS.find(x => x.id === testState.order[testState.idx]);
+  const q = QUESTIONS.find((x) => x.id === testState.order[testState.idx]);
 
   const meta = $("#testMeta");
   const card = $("#testCard");
@@ -506,18 +590,22 @@ function finishTest() {
   `;
 
   testState.answers.forEach((ans, index) => {
-    const q = QUESTIONS.find(q => q.id === ans.id);
+    const q = QUESTIONS.find((q) => q.id === ans.id);
     if (!q) return;
 
     reviewHtml += `
       <div style="margin:14px 0;">
         <p><b>${index + 1}. ${escapeHtml(q.text)}</b> <span class="muted">(moduł: ${escapeHtml(q.module)})</span></p>
-        ${["A", "B", "C"].map(letter => {
-          let style = "";
-          if (letter === ans.correct) style = "color: #1f9d55; font-weight: bold;";
-          if (letter === ans.chosen && ans.chosen !== ans.correct) style = "color: #d64545; font-weight: bold;";
-          return `<div style="${style}">${letter}. ${escapeHtml(q.choices?.[letter] ?? "")}</div>`;
-        }).join("")}
+        ${["A", "B", "C"]
+          .map((letter) => {
+            let style = "";
+            if (letter === ans.correct)
+              style = "color: #1f9d55; font-weight: bold;";
+            if (letter === ans.chosen && ans.chosen !== ans.correct)
+              style = "color: #d64545; font-weight: bold;";
+            return `<div style="${style}">${letter}. ${escapeHtml(q.choices?.[letter] ?? "")}</div>`;
+          })
+          .join("")}
         ${q.explanation ? `<p class="muted" style="margin-top:8px;">${escapeHtml(q.explanation)}</p>` : ""}
       </div>
       <hr>
@@ -532,7 +620,7 @@ function finishTest() {
 // ==============================
 function nextQuestionId() {
   if (!QUESTIONS.length) return 1;
-  const maxId = Math.max(...QUESTIONS.map(q => Number(q.id) || 0));
+  const maxId = Math.max(...QUESTIONS.map((q) => Number(q.id) || 0));
   return maxId + 1;
 }
 
@@ -545,8 +633,10 @@ function initAddTool() {
   const moduleSel = $("#addModule");
   if (moduleSel) {
     const modules = getModules();
-    const onlyMods = modules.filter(m => m !== "ALL");
-    moduleSel.innerHTML = onlyMods.map(m => `<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`).join("");
+    const onlyMods = modules.filter((m) => m !== "ALL");
+    moduleSel.innerHTML = onlyMods
+      .map((m) => `<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`)
+      .join("");
     if (!moduleSel.value && onlyMods.length) moduleSel.value = onlyMods[0];
   }
 
@@ -585,7 +675,8 @@ function generateQuestionJson() {
   if (!id || id < 1) errors.push("ID musi być liczbą >= 1");
   if (!text) errors.push("Treść pytania jest wymagana");
   if (!A || !B || !C) errors.push("Odpowiedzi A/B/C są wymagane");
-  if (!["A", "B", "C"].includes(correct)) errors.push("Poprawna odpowiedź musi być A/B/C");
+  if (!["A", "B", "C"].includes(correct))
+    errors.push("Poprawna odpowiedź musi być A/B/C");
 
   if (errors.length) {
     if (status) status.textContent = "❌ " + errors.join(" • ");
@@ -598,14 +689,15 @@ function generateQuestionJson() {
     module: moduleName,
     text,
     choices: { A, B, C },
-    correct
+    correct,
   };
   if (explanation) obj.explanation = explanation;
 
   const json = JSON.stringify(obj, null, 2);
 
   if (out) out.value = json;
-  if (status) status.textContent = "✅ Wygenerowano. Skopiuj i wklej do questions.json";
+  if (status)
+    status.textContent = "✅ Wygenerowano. Skopiuj i wklej do questions.json";
 
   const idEl = $("#addId");
   if (idEl) idEl.value = String(id + 1);
@@ -627,7 +719,9 @@ async function copyGeneratedJson() {
   } catch (e) {
     out.focus();
     out.select();
-    if (status) status.textContent = "⚠️ Nie mogę użyć schowka — zaznaczyłem tekst, skopiuj ręcznie (Ctrl+C).";
+    if (status)
+      status.textContent =
+        "⚠️ Nie mogę użyć schowka — zaznaczyłem tekst, skopiuj ręcznie (Ctrl+C).";
   }
 }
 
@@ -644,11 +738,15 @@ function buildQuestionHtml(q, { mode }) {
   return `
     <p class="qTitle">${escapeHtml(q.text)}</p>
     <div class="answers">
-      ${["A", "B", "C"].map(letter => `
+      ${["A", "B", "C"]
+        .map(
+          (letter) => `
         <button class="answer" data-letter="${letter}">
           <b>${letter}.</b> ${escapeHtml(q.choices?.[letter] ?? "")}
         </button>
-      `).join("")}
+      `,
+        )
+        .join("")}
     </div>
     ${mode === "learn" ? expl : ""}
   `;
@@ -657,32 +755,34 @@ function buildQuestionHtml(q, { mode }) {
 function wireAnswerButtons(host, q, { mode }) {
   const btns = host.querySelectorAll(".answer");
 
-  btns.forEach(btn => btn.addEventListener("click", () => {
-    const chosen = btn.dataset.letter;
+  btns.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const chosen = btn.dataset.letter;
 
-    if (mode === "learn") {
-      btns.forEach(b => b.disabled = true);
-      btns.forEach(b => {
-        const letter = b.dataset.letter;
-        if (letter === q.correct) b.classList.add("good");
-        if (letter === chosen && chosen !== q.correct) b.classList.add("bad");
-      });
-      const expl = host.querySelector("#expl");
-      if (expl) expl.style.display = "block";
-      return;
-    }
+      if (mode === "learn") {
+        btns.forEach((b) => (b.disabled = true));
+        btns.forEach((b) => {
+          const letter = b.dataset.letter;
+          if (letter === q.correct) b.classList.add("good");
+          if (letter === chosen && chosen !== q.correct) b.classList.add("bad");
+        });
+        const expl = host.querySelector("#expl");
+        if (expl) expl.style.display = "block";
+        return;
+      }
 
-    if (mode === "test") {
-      const isCorrect = chosen === q.correct;
-      if (isCorrect) testState.correct++;
+      if (mode === "test") {
+        const isCorrect = chosen === q.correct;
+        if (isCorrect) testState.correct++;
 
-      testState.answers.push({ id: q.id, chosen, correct: q.correct });
+        testState.answers.push({ id: q.id, chosen, correct: q.correct });
 
-      testState.idx++;
-      if (testState.idx >= testState.order.length) finishTest();
-      else renderTestQuestion();
-    }
-  }));
+        testState.idx++;
+        if (testState.idx >= testState.order.length) finishTest();
+        else renderTestQuestion();
+      }
+    }),
+  );
 }
 // zoom
 function openImageModal(src, title = "Dokument") {
@@ -722,15 +822,46 @@ function bindOncePlain(selector, eventName, handler) {
   el.parentNode.replaceChild(clone, el);
   clone.addEventListener(eventName, handler);
 }
+function initAutoHideHeader() {
+  const header = document.querySelector(".topbar");
+  if (!header) return;
+
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      const diff = y - lastY;
+
+      // mały próg, żeby nie mrugało
+      if (Math.abs(diff) > 8) {
+        if (diff > 0 && y > 80) {
+          // scroll w dół -> chowaj
+          header.classList.add("isHidden");
+        } else {
+          // scroll w górę -> pokaż
+          header.classList.remove("isHidden");
+        }
+        lastY = y;
+      }
+
+      ticking = false;
+    });
+  });
+}
 // ==============================
 // START
 // ==============================
 (function start() {
   loadData()
     .then(() => {
-  setView("knowledge");
-  initImageModal();
-})
+      setView("knowledge");
+      initAutoHideHeader();
+    })
     .catch((e) => {
       console.error(e);
       document.body.innerHTML = `
