@@ -4,9 +4,9 @@
     "module": "Podstawa",
     "text": "Minimalna grubość bieżnika ?",
     "choices": {
-      "A": "1.6mm",
-      "B": "3mm",
-      "C": "2mm"
+      "A": "1.6 mm",
+      "B": "3 mm",
+      "C": "2 mm"
     },
     "correct": "A",
     "explanation": "Według ustawy 1.6mm"
@@ -28,9 +28,9 @@
     "module": "BUS100",
     "text": "Minimalna grubość bieżnika dla autobusu o dopuszczalnej prędkości do 100km/h?",
     "choices": {
-      "A": "1.6mm",
-      "B": "3",
-      "C": "2"
+      "A": "1.6 mm",
+      "B": "3 mm",
+      "C": "2 mm"
     },
     "correct": "B",
     "explanation": "Według ustawy 3mm"
@@ -95,4 +95,5 @@
   "correct": "A",
   "explanation": "Prawo o ruchu drogowym art. 81 ust. 7"
 }
+
 ]
