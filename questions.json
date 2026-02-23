@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "module": "IrejSkierowane",
+    "module": "1REJ,SKIEROWANE",
     "text": "Ciągnik rolniczy marki SAM podlega badaniom okresowym w następujących terminach:",
     "choices": {
       "A": "3 lata od dnia pierwszej rejestracji, a następnie przed upływem każdych kolejnych 2 lat od dnia przeprowadzenia badania",
@@ -96,363 +96,1203 @@
     "explanation": "Prawo o ruchu drogowym art. 81 ust. 7"
   },
   {
-    "id": 1001,
-    "module": "TESTOWE",
-    "text": "Podczas badania technicznego pojazdu sprawdzenie luzów w układzie kierowniczym wykonuje się:",
+    "id": 10,
+    "module": "Warunki techniczne",
+    "text": "Przepisów rozporządzenia nie stosuje się do pojazdu zabytkowego:",
     "choices": {
-      "A": "Wyłącznie wzrokowo",
-      "B": "Na podnośniku lub szarpakach",
-      "C": "Wyłącznie podczas jazdy próbnej"
+      "A": "Tak",
+      "B": "Nie",
+      "C": "Tylko w zakresie mas"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 1 pkt 3 Str. 4 PDF."
+  },
+  {
+    "id": 11,
+    "module": "Warunki techniczne",
+    "text": "Przepisów rozporządzenia nie stosuje się do tramwaju i trolejbusu, ponieważ:",
+    "choices": {
+      "A": "nie podlegają rejestracji",
+      "B": "warunki techniczne określają odrębne przepisy",
+      "C": "nie są pojazdami"
     },
     "correct": "B",
-    "explanation": "Luzy w układzie kierowniczym sprawdza się na podnośniku lub przy użyciu szarpaków, co pozwala wykryć nadmierne luzy w drążkach i przekładni."
+    "explanation": "§ 1 ust. 1 pkt 4 Str. 4 PDF."
   },
   {
-    "id": 1002,
-    "module": "TESTOWE",
-    "text": "Badanie skuteczności hamulca postojowego wykonuje się:",
+    "id": 12,
+    "module": "Warunki techniczne",
+    "text": "Jeżeli nie można ustalić daty pierwszej rejestracji (np. licytacja publiczna), warunki techniczne stosuje się odpowiednio od:",
     "choices": {
-      "A": "Na stanowisku rolkowym",
-      "B": "Wyłącznie podczas jazdy",
-      "C": "Przy wyłączonym silniku"
-    },
-    "correct": "A",
-    "explanation": "Skuteczność hamulca postojowego sprawdzana jest na stanowisku rolkowym, gdzie mierzone są siły hamowania."
-  },
-  {
-    "id": 1003,
-    "module": "TESTOWE",
-    "text": "Numer VIN pojazdu powinien być:",
-    "choices": {
-      "A": "Trwale naniesiony i czytelny",
-      "B": "Możliwy do usunięcia bez śladu",
-      "C": "Umieszczony wyłącznie na tabliczce znamionowej"
-    },
-    "correct": "A",
-    "explanation": "Numer VIN musi być trwale naniesiony, czytelny i zgodny z dokumentacją pojazdu."
-  },
-  {
-    "id": 1004,
-    "module": "TESTOWE",
-    "text": "Maksymalna masa całkowita pojazdu oznaczona jest w dowodzie rejestracyjnym symbolem:",
-    "choices": {
-      "A": "F.1",
-      "B": "P.1",
-      "C": "S.1"
-    },
-    "correct": "A",
-    "explanation": "Pole F.1 w dowodzie rejestracyjnym oznacza maksymalną masę całkowitą pojazdu."
-  },
-  {
-    "id": 1005,
-    "module": "TESTOWE",
-    "text": "Pomiar emisji spalin w silniku benzynowym obejmuje kontrolę:",
-    "choices": {
-      "A": "Ciśnienia oleju",
-      "B": "Poziomu CO i HC",
-      "C": "Wyłącznie poziomu tlenu"
+      "A": "dnia sprowadzenia do RP",
+      "B": "1 stycznia roku produkcji pojazdu",
+      "C": "dnia pierwszego badania w SKP"
     },
     "correct": "B",
-    "explanation": "Podczas badania mierzy się poziom CO (tlenku węgla), HC (węglowodorów) oraz współczynnik lambda."
+    "explanation": "§ 1 ust. 1a Str. 4 PDF."
   },
   {
-    "id": 1006,
-    "module": "TESTOWE",
-    "text": "Diagnosta zatrzymuje dowód rejestracyjny w przypadku:",
+    "id": 13,
+    "module": "Warunki techniczne",
+    "text": "Pojazd zarejestrowany za granicą, znajdujący się na terytorium RP, powinien odpowiadać warunkom technicznym określonym w:",
     "choices": {
-      "A": "Braku trójkąta ostrzegawczego",
-      "B": "Usterki zagrażającej bezpieczeństwu",
-      "C": "Braku ubezpieczenia OC"
+      "A": "Konwencji o ruchu drogowym (Wiedeń, 1968)",
+      "B": "wyłącznie przepisach polskich",
+      "C": "Regulaminach EKG ONZ"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 2 Str. 4 PDF."
+  },
+  {
+    "id": 14,
+    "module": "Warunki techniczne",
+    "text": "W rozporządzeniu przez „Regulaminy EKG ONZ” rozumie się regulaminy będące załącznikami do Porozumienia sporządzonego w:",
+    "choices": {
+      "A": "Genewie dnia 20 marca 1958 r.",
+      "B": "Wiedniu dnia 8 listopada 1968 r.",
+      "C": "Brukseli dnia 1 stycznia 1970 r."
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 2 Str. None PDF."
+  },
+  {
+    "id": 15,
+    "module": "Warunki techniczne",
+    "text": "Ciężar 1 tony w rozumieniu rozporządzenia odpowiada:",
+    "choices": {
+      "A": "9,8 kN",
+      "B": "10 kN",
+      "C": "9,81 N"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 3 Str. 5 PDF."
+  },
+  {
+    "id": 16,
+    "module": "Warunki techniczne",
+    "text": "„Paliwa alternatywne” obejmują m.in.:",
+    "choices": {
+      "A": "energię elektryczną i wodór",
+      "B": "wyłącznie LPG",
+      "C": "wyłącznie energię elektryczną"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 13 Str. 6 PDF."
+  },
+  {
+    "id": 17,
+    "module": "Warunki techniczne",
+    "text": "Do paliw alternatywnych zalicza się gaz:",
+    "choices": {
+      "A": "CNG, LNG i LPG",
+      "B": "tylko LPG",
+      "C": "tylko CNG"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 13 lit. c–e Str. 6 PDF."
+  },
+  {
+    "id": 18,
+    "module": "Warunki techniczne",
+    "text": "W definicji „operacji transportu intermodalnego” odcinek drogowy początkowy lub końcowy na terytorium UE nie powinien przekraczać:",
+    "choices": {
+      "A": "100 km",
+      "B": "150 km",
+      "C": "200 km"
     },
     "correct": "B",
-    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+    "explanation": "§ 1 ust. 3 pkt 12 lit. b Str. 5 PDF."
   },
   {
-    "id": 1007,
-    "module": "TESTOWE",
-    "text": "Liczba osi pojazdu w dowodzie rejestracyjnym oznaczona jest symbolem:",
+    "id": 19,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość pojazdu samochodowego (z wyjątkiem autobusu i wyjątków) wynosi:",
     "choices": {
-      "A": "L",
-      "B": "O.1",
-      "C": "D.3"
+      "A": "12,00 m",
+      "B": "13,50 m",
+      "C": "16,50 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+    "explanation": "§ 2 ust. 1 pkt 1 Str. 6 PDF."
   },
   {
-    "id": 1008,
-    "module": "TESTOWE",
-    "text": "Pojemność silnika w dowodzie rejestracyjnym oznaczona jest symbolem:",
+    "id": 20,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość pojazdu członowego wynosi:",
     "choices": {
-      "A": "F.2",
-      "B": "P.1",
-      "C": "Q"
-    },
-    "correct": "B",
-    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
-  },
-  {
-    "id": 1009,
-    "module": "TESTOWE",
-    "text": "Badanie amortyzatorów wykonuje się:",
-    "choices": {
-      "A": "Wyłącznie wizualnie",
-      "B": "Na stanowisku do badania zawieszenia",
-      "C": "Tylko przy dużej prędkości"
-    },
-    "correct": "B",
-    "explanation": "Prawidłowa odpowiedź to B. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
-  },
-  {
-    "id": 1010,
-    "module": "TESTOWE",
-    "text": "Homologacja pojazdu potwierdzana jest w dowodzie rejestracyjnym symbolem:",
-    "choices": {
-      "A": "K",
-      "B": "J",
-      "C": "H"
+      "A": "16,50 m",
+      "B": "18,75 m",
+      "C": "12,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. Wynika to z obowiązujących oznaczeń i zasad badania technicznego pojazdów."
+    "explanation": "§ 2 ust. 1 pkt 4 Str. 6 PDF."
   },
   {
-    "id": 1011,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1011. Wybierz prawidłową odpowiedź.",
+    "id": 21,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość zespołu pojazdów (pojazd silnikowy + przyczepa) wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "18,75 m",
+      "B": "16,50 m",
+      "C": "22,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 5 Str. 7 PDF."
   },
   {
-    "id": 1012,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1012. Wybierz prawidłową odpowiedź.",
+    "id": 22,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość autobusu przegubowego wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "18,75 m",
+      "B": "16,50 m",
+      "C": "15,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 6 Str. 7 PDF."
   },
   {
-    "id": 1013,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1013. Wybierz prawidłową odpowiedź.",
+    "id": 23,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość autobusu o dwóch osiach wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "13,50 m",
+      "B": "12,00 m",
+      "C": "15,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 7 Str. 7 PDF."
   },
   {
-    "id": 1014,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1014. Wybierz prawidłową odpowiedź.",
+    "id": 24,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość autobusu o liczbie osi większej niż dwie wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "15,00 m",
+      "B": "13,50 m",
+      "C": "18,75 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 8 Str. 7 PDF."
   },
   {
-    "id": 1015,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1015. Wybierz prawidłową odpowiedź.",
+    "id": 25,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość zespołu autobus + przyczepa wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "18,75 m",
+      "B": "16,50 m",
+      "C": "22,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 9 Str. 7 PDF."
   },
   {
-    "id": 1016,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1016. Wybierz prawidłową odpowiedź.",
+    "id": 26,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość zespołu trzech pojazdów (ciągnik rolniczy lub pojazd wolnobieżny jako ciągnący) wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "22,00 m",
+      "B": "18,75 m",
+      "C": "25,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 10 Str. 7 PDF."
   },
   {
-    "id": 1017,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1017. Wybierz prawidłową odpowiedź.",
+    "id": 27,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość motocykla/motoroweru/roweru/pojazdu czterokołowego (oraz zespołu z przyczepą) wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "4,00 m",
+      "B": "3,00 m",
+      "C": "5,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 11 Str. 7 PDF."
   },
   {
-    "id": 1018,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1018. Wybierz prawidłową odpowiedź.",
+    "id": 28,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość hulajnogi elektrycznej lub UTO wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "1,4 m",
+      "B": "1,2 m",
+      "C": "1,6 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 1 pkt 12 Str. 7 PDF."
   },
   {
-    "id": 1019,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1019. Wybierz prawidłową odpowiedź.",
+    "id": 29,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna szerokość pojazdu (z zastrzeżeniami) wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "2,55 m",
+      "B": "2,50 m",
+      "C": "2,60 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 2 (zd. 1) Str. 7 PDF."
   },
   {
-    "id": 1020,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1020. Wybierz prawidłową odpowiedź.",
+    "id": 30,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna szerokość nadwozia pojazdu do przewozu towarów w określonej temperaturze (przy spełnieniu warunku izolacji) wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "2,60 m",
+      "B": "2,55 m",
+      "C": "2,70 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 2 (zd. 2) Str. 7 PDF."
   },
   {
-    "id": 1021,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1021. Wybierz prawidłową odpowiedź.",
+    "id": 31,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna wysokość pojazdu wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "4,00 m",
+      "B": "4,20 m",
+      "C": "3,80 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 4 Str. 7 PDF."
   },
   {
-    "id": 1022,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1022. Wybierz prawidłową odpowiedź.",
+    "id": 32,
+    "module": "Warunki techniczne",
+    "text": "Bagażnik z tyłu autobusu / platforma samozaładowcza z tyłu pojazdu nie mogą powodować przekroczenia długości o więcej niż:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "0,30 m",
+      "B": "0,50 m",
+      "C": "0,15 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 3 Str. 7 PDF."
   },
   {
-    "id": 1023,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1023. Wybierz prawidłową odpowiedź.",
+    "id": 33,
+    "module": "Warunki techniczne",
+    "text": "Odległość między osią sworznia siodłowego a tylnym obrysem naczepy nie może przekraczać:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "12,00 m",
+      "B": "10,50 m",
+      "C": "13,72 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 6 Str. None PDF."
   },
   {
-    "id": 1024,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1024. Wybierz prawidłową odpowiedź.",
+    "id": 34,
+    "module": "Warunki techniczne",
+    "text": "Odległość między tylną osią pojazdu samochodowego a przednią osią przyczepy w zespole pojazdów nie może być mniejsza niż:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "3,00 m",
+      "B": "2,50 m",
+      "C": "3,50 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 9 Str. 7 PDF."
   },
   {
-    "id": 1025,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1025. Wybierz prawidłową odpowiedź.",
+    "id": 35,
+    "module": "Warunki techniczne",
+    "text": "Odległość między osią sworznia siodłowego a dowolnym punktem przedniej części naczepy nie może przekraczać:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "2,04 m",
+      "B": "1,80 m",
+      "C": "2,50 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 10 Str. 8 PDF."
   },
   {
-    "id": 1026,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1026. Wybierz prawidłową odpowiedź.",
+    "id": 36,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna wysokość motocykla/motoroweru oraz niektórych pojazdów czterokołowych wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "2,50 m",
+      "B": "3,00 m",
+      "C": "2,00 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 12 Str. 8 PDF."
   },
   {
-    "id": 1027,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1027. Wybierz prawidłową odpowiedź.",
+    "id": 37,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna szerokość motocykla i motoroweru oraz niektórych pojazdów czterokołowych wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "2,00 m",
+      "B": "2,55 m",
+      "C": "1,80 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 13 (zd. 1) Str. 8 PDF."
   },
   {
-    "id": 1028,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1028. Wybierz prawidłową odpowiedź.",
+    "id": 38,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna szerokość hulajnogi elektrycznej i UTO wynosi:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "0,9 m",
+      "B": "1,0 m",
+      "C": "0,8 m"
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 13a Str. 8 PDF."
   },
   {
-    "id": 1029,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1029. Wybierz prawidłową odpowiedź.",
+    "id": 39,
+    "module": "Warunki techniczne",
+    "text": "Przepisy § 2 ust. 7–9, 12 i 13 stosuje się do pojazdów zarejestrowanych po raz pierwszy po dniu:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "31 grudnia 1998 r.",
+      "B": "31 grudnia 1993 r.",
+      "C": "31 grudnia 2003 r."
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 14 Str. 8 PDF."
   },
   {
-    "id": 1030,
-    "module": "TESTOWE",
-    "text": "Pytanie testowe numer 1030. Wybierz prawidłową odpowiedź.",
+    "id": 40,
+    "module": "Warunki techniczne",
+    "text": "Przepis § 2 ust. 10 stosuje się do pojazdów zarejestrowanych po raz pierwszy po dniu:",
     "choices": {
-      "A": "Odpowiedź A",
-      "B": "Odpowiedź B",
-      "C": "Odpowiedź C"
+      "A": "31 grudnia 1993 r.",
+      "B": "31 grudnia 1998 r.",
+      "C": "31 grudnia 2001 r."
     },
     "correct": "A",
-    "explanation": "Prawidłowa odpowiedź to A. To pytanie testowe służy sprawdzeniu działania systemu wyświetlania wyjaśnień."
+    "explanation": "§ 2 ust. 15 Str. 8 PDF."
+  },
+  {
+    "id": 41,
+    "module": "Warunki techniczne",
+    "text": "DMC przyczepy o jednej osi (z wyjątkiem naczepy) wynosi:",
+    "choices": {
+      "A": "10 t",
+      "B": "11 t",
+      "C": "9 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 1 lit. a (pierwsza wartość) Str. 9 PDF."
+  },
+  {
+    "id": 42,
+    "module": "Warunki techniczne",
+    "text": "DMC przyczepy z osią centralną (1 oś, z wyjątkiem naczepy) wynosi:",
+    "choices": {
+      "A": "11 t",
+      "B": "10 t",
+      "C": "12 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 1 lit. a (druga wartość) Str. 9 PDF."
+  },
+  {
+    "id": 43,
+    "module": "Warunki techniczne",
+    "text": "DMC przyczepy o dwóch osiach (z wyjątkiem naczepy) wynosi:",
+    "choices": {
+      "A": "18 t",
+      "B": "16 t",
+      "C": "20 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 1 lit. b Str. 6 PDF."
+  },
+  {
+    "id": 44,
+    "module": "Warunki techniczne",
+    "text": "DMC przyczepy o liczbie osi większej niż dwie (z wyjątkiem naczepy) wynosi:",
+    "choices": {
+      "A": "24 t",
+      "B": "22 t",
+      "C": "26 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 1 lit. c Str. 9 PDF."
+  },
+  {
+    "id": 45,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów mającego 3 osie wynosi:",
+    "choices": {
+      "A": "28 t",
+      "B": "30 t",
+      "C": "26 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 3 Str. 9 PDF."
+  },
+  {
+    "id": 46,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu 4-osiowego (pojazd 2 osie + przyczepa 2 osie) wynosi:",
+    "choices": {
+      "A": "36 t",
+      "B": "35 t",
+      "C": "40 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 4 Str. 9 PDF."
+  },
+  {
+    "id": 47,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o dwóch osiach (innego niż autobus) wynosi:",
+    "choices": {
+      "A": "18 t",
+      "B": "16 t",
+      "C": "19,5 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 8 Str. 9 PDF."
+  },
+  {
+    "id": 48,
+    "module": "Warunki techniczne",
+    "text": "DMC autobusu o dwóch osiach wynosi:",
+    "choices": {
+      "A": "19,5 t",
+      "B": "18 t",
+      "C": "20,0 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 9 Str. 9 PDF."
+  },
+  {
+    "id": 49,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o trzech osiach wynosi zasadniczo:",
+    "choices": {
+      "A": "25 t",
+      "B": "24 t",
+      "C": "26 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 10 (wartość podstawowa) Str. 9 PDF."
+  },
+  {
+    "id": 50,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o liczbie osi większej niż trzy wynosi:",
+    "choices": {
+      "A": "32 t",
+      "B": "30 t",
+      "C": "34 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 11 Str. 9 PDF."
+  },
+  {
+    "id": 51,
+    "module": "Warunki techniczne",
+    "text": "DMC autobusu przegubowego o trzech osiach wynosi:",
+    "choices": {
+      "A": "28 t",
+      "B": "27 t",
+      "C": "29 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 12 Str. 10 PDF."
+  },
+  {
+    "id": 52,
+    "module": "Warunki techniczne",
+    "text": "DMC ciągnika rolniczego o dwóch osiach wynosi:",
+    "choices": {
+      "A": "18 t",
+      "B": "16 t",
+      "C": "20 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 13 lit. a Str. 10 PDF."
+  },
+  {
+    "id": 53,
+    "module": "Warunki techniczne",
+    "text": "DMC ciągnika rolniczego o trzech i więcej osiach wynosi:",
+    "choices": {
+      "A": "24 t",
+      "B": "22 t",
+      "C": "26 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 13 lit. b Str. 10 PDF."
+  },
+  {
+    "id": 54,
+    "module": "Warunki techniczne",
+    "text": "Minimalny udział obciążenia osi kierowanej oraz osi napędowej ciągnika rolniczego w każdym stanie obciążenia nie może być mniejszy niż:",
+    "choices": {
+      "A": "20% masy własnej",
+      "B": "25% masy własnej",
+      "C": "15% masy własnej"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 13 (zdanie po tiret) Str. 10 PDF."
+  },
+  {
+    "id": 55,
+    "module": "Warunki techniczne",
+    "text": "Minimalny udział masy na oś lub osie napędowe pojazdu (lub zespołu) nie może być mniejszy niż:",
+    "choices": {
+      "A": "25%",
+      "B": "20%",
+      "C": "30%"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 2 Str. 10 PDF."
+  },
+  {
+    "id": 56,
+    "module": "Warunki techniczne",
+    "text": "Dopuszczalna masa całkowita zespołu pojazdów uczestniczącego w ruchu drogowym ustalana dla samochodu ciężarowego z przyczepą wynika z:",
+    "choices": {
+      "A": "sumy DMC pojazdu ciągnącego i przyczepy",
+      "B": "DMC przyczepy",
+      "C": "masy własnej zespołu"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 4 pkt 1 Str. 10 PDF."
+  },
+  {
+    "id": 57,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów z przyczepą ze sztywnym dyszlem ustala się jako sumę DMC pomniejszoną o:",
+    "choices": {
+      "A": "wyższą wartość dopuszczalnego pionowego obciążenia sprzęgu",
+      "B": "niższą wartość obciążenia sprzęgu",
+      "C": "wartość stałą 1 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 4 pkt 2 Str. 10 PDF."
+  },
+  {
+    "id": 58,
+    "module": "Warunki techniczne",
+    "text": "DMC ciągnika siodłowego z naczepą ustala się jako sumę DMC pomniejszoną o:",
+    "choices": {
+      "A": "wyższą wartość dopuszczalnego pionowego obciążenia sprzęgu lub dopuszczalnego nacisku naczepy na siodło",
+      "B": "niższą wartość obciążenia sprzęgu",
+      "C": "wartość stałą 0,5 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 4 pkt 3 Str. 10 PDF."
+  },
+  {
+    "id": 59,
+    "module": "Warunki techniczne",
+    "text": "Pojazdy N2/N3 z wyprofilowaną kabiną mogą przekraczać maksymalne długości, pod warunkiem m.in. oznakowania kabiny napisem:",
+    "choices": {
+      "A": "„96/53/EC ARTICLE 9A COMPLIANT”",
+      "B": "„96/53/EC ARTICLE 8B COMPLIANT”",
+      "C": "„96/53/EC ARTICLE 10B COMPLIANT”"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 1a Str. 7 PDF."
+  },
+  {
+    "id": 60,
+    "module": "Warunki techniczne",
+    "text": "Dodatkowe oznakowanie dla pojazdów zasilanych paliwem alternatywnym lub bezemisyjnych (wskazanych w §3) ma treść:",
+    "choices": {
+      "A": "„96/53/EC ARTICLE 10B COMPLIANT – XXXX KG”",
+      "B": "„96/53/EC ARTICLE 9A COMPLIANT”",
+      "C": "„EURO VI COMPLIANT”"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1b Str. 10 PDF."
+  },
+  {
+    "id": 61,
+    "module": "Warunki techniczne",
+    "text": "Urządzenia aerodynamiczne montowane z tyłu pojazdu muszą mieć znak homologacji typu UE uzupełniony napisem:",
+    "choices": {
+      "A": "„96/53/EC ARTICLE 8B COMPLIANT”",
+      "B": "„96/53/EC ARTICLE 9A COMPLIANT”",
+      "C": "„96/53/EC ARTICLE 10B COMPLIANT”"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 20 Str. 8 PDF."
+  },
+  {
+    "id": 62,
+    "module": "Warunki techniczne",
+    "text": "Urządzenia aerodynamiczne, których długość przekracza 500 mm, powinny być objęte:",
+    "choices": {
+      "A": "świadectwem homologacji typu WE przedmiotu wyposażenia lub części",
+      "B": "zaświadczeniem z SKP",
+      "C": "oświadczeniem producenta bez homologacji"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 19 pkt 2 Str. 8 PDF."
+  },
+  {
+    "id": 63,
+    "module": "Warunki techniczne",
+    "text": "Urządzenia aerodynamiczne nie mogą zwiększać maksymalnej dozwolonej długości o więcej niż 20 cm, gdy są:",
+    "choices": {
+      "A": "wsunięte lub złożone",
+      "B": "rozłożone",
+      "C": "zdemontowane"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 19 pkt 3 Str. None PDF."
+  },
+  {
+    "id": 64,
+    "module": "Warunki techniczne",
+    "text": "Przekroczenie maksymalnych długości przez urządzenia aerodynamiczne nie powinno:",
+    "choices": {
+      "A": "zwiększać przestrzeni ładunkowej",
+      "B": "zmniejszać widoczności",
+      "C": "zmieniać masy pojazdu"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 19 pkt 4 Str. 8 PDF."
+  },
+  {
+    "id": 65,
+    "module": "Warunki techniczne",
+    "text": "W operacjach transportu intermodalnego wymiary pojazdu członowego mogą być przekroczone o:",
+    "choices": {
+      "A": "0,15 m",
+      "B": "0,30 m",
+      "C": "0,20 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 16 Str. 8 PDF."
+  },
+  {
+    "id": 66,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 5/6 osi (ciągnik 2 osie + naczepa 3 osie) w operacjach transportu intermodalnego może wynosić:",
+    "choices": {
+      "A": "42 t",
+      "B": "40 t",
+      "C": "44 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 2 lit. a Str. 9 PDF."
+  },
+  {
+    "id": 67,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 5/6 osi (ciągnik 3 osie + naczepa 2/3 osie) w operacjach transportu intermodalnego może wynosić:",
+    "choices": {
+      "A": "44 t",
+      "B": "42 t",
+      "C": "40 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 2 lit. b Str. 9 PDF."
+  },
+  {
+    "id": 68,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o dwóch osiach (nie autobus) zasilanego paliwem alternatywnym może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "1 t",
+      "B": "0,5 t",
+      "C": "2 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 8 Str. 9 PDF."
+  },
+  {
+    "id": 69,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o dwóch osiach (nie autobus) bezemisyjnego może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "2 t",
+      "B": "1 t",
+      "C": "3 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 8 Str. 9 PDF."
+  },
+  {
+    "id": 70,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o trzech osiach zasilanego paliwem alternatywnym może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "1 t",
+      "B": "2 t",
+      "C": "0,5 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 10 Str. 9 PDF."
+  },
+  {
+    "id": 71,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu samochodowego o trzech osiach bezemisyjnego może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "2 t",
+      "B": "1 t",
+      "C": "3 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 10 Str. 9 PDF."
+  },
+  {
+    "id": 72,
+    "module": "Warunki techniczne",
+    "text": "DMC autobusu przegubowego o trzech osiach zasilanego paliwem alternatywnym może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "1 t",
+      "B": "2 t",
+      "C": "0,5 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 12 Str. 10 PDF."
+  },
+  {
+    "id": 73,
+    "module": "Warunki techniczne",
+    "text": "DMC autobusu przegubowego o trzech osiach bezemisyjnego może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "2 t",
+      "B": "1 t",
+      "C": "3 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 12 Str. 10 PDF."
+  },
+  {
+    "id": 74,
+    "module": "Warunki techniczne",
+    "text": "Dla pojazdów N2/N3 z wyprofilowaną kabiną długość powierzchni ładunkowej pojazdu samochodowego nie może przekraczać:",
+    "choices": {
+      "A": "10,5 m",
+      "B": "12,0 m",
+      "C": "9,0 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 1a Str. 7 PDF."
+  },
+  {
+    "id": 75,
+    "module": "Warunki techniczne",
+    "text": "Odległość mierzona równolegle do osi zespołu między najdalej wysuniętym do przodu punktem przestrzeni ładunkowej za kabiną a tylnym obrysem przyczepy (po odjęciu wskazanej odległości) nie może przekraczać:",
+    "choices": {
+      "A": "15,65 m",
+      "B": "16,40 m",
+      "C": "12,00 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 7 Str. 7 PDF."
+  },
+  {
+    "id": 76,
+    "module": "Warunki techniczne",
+    "text": "Odległość mierzona równolegle do osi zespołu między najdalej wysuniętym do przodu punktem przestrzeni ładunkowej za kabiną a tylnym obrysem przyczepy nie może przekraczać:",
+    "choices": {
+      "A": "16,40 m",
+      "B": "15,65 m",
+      "C": "18,75 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 8 Str. 7 PDF."
+  },
+  {
+    "id": 77,
+    "module": "Warunki techniczne",
+    "text": "Wymiary określone w §2 ust.1 pkt 1, 3, 4 i 6–8 nie obejmują m.in.:",
+    "choices": {
+      "A": "platformy samozaładowczej mocowanej z tyłu",
+      "B": "kół pojazdu",
+      "C": "lusterek bocznych"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 3 Str. 7 PDF."
+  },
+  {
+    "id": 78,
+    "module": "Warunki techniczne",
+    "text": "Wysokość pojazdu w §2 wynosi maksymalnie 4,00 m, z zastrzeżeniem:",
+    "choices": {
+      "A": "ust. 12",
+      "B": "ust. 13",
+      "C": "ust. 16"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 4 (zastrzeżenie) Str. 7 PDF."
+  },
+  {
+    "id": 79,
+    "module": "Warunki techniczne",
+    "text": "Dopuszczalna długość przyczepy (z wyjątkiem naczepy) wynosi:",
+    "choices": {
+      "A": "12,00 m",
+      "B": "13,50 m",
+      "C": "10,00 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 1 pkt 3 Str. 6 PDF."
+  },
+  {
+    "id": 80,
+    "module": "Warunki techniczne",
+    "text": "Maksymalna długość ciągnika rolniczego lub pojazdu wolnobieżnego wynosi:",
+    "choices": {
+      "A": "12,00 m",
+      "B": "10,00 m",
+      "C": "14,00 m"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 1 pkt 2 Str. 6 PDF."
+  },
+  {
+    "id": 81,
+    "module": "Warunki techniczne",
+    "text": "Datą pierwszej rejestracji pojazdu zarejestrowanego w Polsce (dla stosowania warunków technicznych) jest data określona w:",
+    "choices": {
+      "A": "dowodzie rejestracyjnym lub pozwoleniu czasowym",
+      "B": "polisie OC",
+      "C": "CEPiK (tylko)"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 1 lit. a Str. None PDF."
+  },
+  {
+    "id": 82,
+    "module": "Warunki techniczne",
+    "text": "W przypadku pojazdu zarejestrowanego po raz pierwszy za granicą, datą pierwszej rejestracji jest:",
+    "choices": {
+      "A": "data pierwszej rejestracji za granicą",
+      "B": "data pierwszego badania w Polsce",
+      "C": "1 stycznia roku produkcji"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 1 lit. b Str. 5 PDF."
+  },
+  {
+    "id": 83,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu 4-osiowego (pojazd 3 osie + przyczepa 1 oś) wynosi zasadniczo:",
+    "choices": {
+      "A": "35 t",
+      "B": "36 t",
+      "C": "34 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 5 (wartość podstawowa) Str. 9 PDF."
+  },
+  {
+    "id": 84,
+    "module": "Warunki techniczne",
+    "text": "Dopuszcza się DMC 36 t dla zespołu 4-osiowego (3+1), jeżeli m.in. oś napędowa jest wyposażona w koła bliźniacze i:",
+    "choices": {
+      "A": "zawieszenie pneumatyczne lub równoważne",
+      "B": "ABS",
+      "C": "ESP"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 5 (warunek) Str. 9 PDF."
+  },
+  {
+    "id": 85,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 4-osiowego (ciągnik 2 osie + naczepa 2 osie) wynosi 36 t, gdy odległość między osiami naczepy:",
+    "choices": {
+      "A": "wynosi nie więcej niż 1,8 m",
+      "B": "wynosi nie więcej niż 2,5 m",
+      "C": "wynosi co najmniej 3,0 m"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 6 lit. a Str. 9 PDF."
+  },
+  {
+    "id": 86,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 4-osiowego (ciągnik 2 osie + naczepa 2 osie) dopuszcza się 38 t, jeżeli oś napędowa jest wyposażona w koła bliźniacze i:",
+    "choices": {
+      "A": "zawieszenie pneumatyczne lub równoważne",
+      "B": "hamulec awaryjny",
+      "C": "retarder"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 6 lit. b (dopuszczenie 38 t) Str. 9 PDF."
+  },
+  {
+    "id": 87,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 4-osiowego (ciągnik 3 osie + naczepa 1 oś) wynosi zasadniczo:",
+    "choices": {
+      "A": "35 t",
+      "B": "36 t",
+      "C": "38 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 7 (wartość podstawowa) Str. None PDF."
+  },
+  {
+    "id": 88,
+    "module": "Warunki techniczne",
+    "text": "Dopuszcza się DMC 36 t dla pojazdu członowego 4-osiowego (3+1), jeżeli m.in. oś napędowa jest wyposażona w koła bliźniacze i:",
+    "choices": {
+      "A": "zawieszenie pneumatyczne lub równoważne",
+      "B": "tachograf",
+      "C": "ogranicznik prędkości"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 7 (warunek) Str. 9 PDF."
+  },
+  {
+    "id": 89,
+    "module": "Warunki techniczne",
+    "text": "DMC pojazdu członowego 4-osiowego (ciągnik 2 osie + naczepa 2 osie) przy odległości między osiami naczepy > 1,8 m wynosi:",
+    "choices": {
+      "A": "36 t",
+      "B": "38 t",
+      "C": "40 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 6 lit. b (wartość podstawowa) Str. 9 PDF."
+  },
+  {
+    "id": 90,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów (co najmniej 5 osi) w ruchu międzynarodowym/krajowym wynosi 40 t, z wyjątkiem m.in. intermodal, gdzie może wynosić:",
+    "choices": {
+      "A": "42 t lub 44 t",
+      "B": "45 t",
+      "C": "38 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 2 lit. a–d Str. 9 PDF."
+  },
+  {
+    "id": 91,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów, w którym pojazdem ciągnącym jest pojazd wolnobieżny lub ciągnik rolniczy, nie może przekraczać:",
+    "choices": {
+      "A": "40 t",
+      "B": "44 t",
+      "C": "36 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 14 Str. 10 PDF."
+  },
+  {
+    "id": 92,
+    "module": "Warunki techniczne",
+    "text": "DMC 4-osiowego samochodu ciężarowego (wywrotka/betoniarka/betoniarka z pompą) używanego w ruchu krajowym może wynosić:",
+    "choices": {
+      "A": "34 t",
+      "B": "32 t",
+      "C": "36 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 15 Str. 10 PDF."
+  },
+  {
+    "id": 93,
+    "module": "Warunki techniczne",
+    "text": "DMC 34 t dla pojazdu 4-osiowego (wywrotka/betoniarka/pompa do betonu) wymaga m.in., aby oś napędowa była wyposażona w koła bliźniacze lub 'Super Single' oraz:",
+    "choices": {
+      "A": "zawieszenie pneumatyczne lub równoważne",
+      "B": "napęd na 4 koła",
+      "C": "hamulec postojowy elektroniczny"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 15 (warunek) Str. 9 PDF."
+  },
+  {
+    "id": 94,
+    "module": "Warunki techniczne",
+    "text": "Pojazd po zmianach konstrukcyjnych (zmiana rodzaju pojazdu) powinien spełniać wymagania obowiązujące w dniu:",
+    "choices": {
+      "A": "dokonania zmiany rodzaju pojazdu",
+      "B": "pierwszej rejestracji pojazdu",
+      "C": "pierwszego badania po zmianie"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 2a Str. 4 PDF."
+  },
+  {
+    "id": 95,
+    "module": "Warunki techniczne",
+    "text": "W §2 przez oś rozumie się element konstrukcji stanowiący wspólną geometryczną oś obrotu:",
+    "choices": {
+      "A": "dwóch lub więcej kół",
+      "B": "jednego koła",
+      "C": "wyłącznie kół napędzanych"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 18 Str. 8 PDF."
+  },
+  {
+    "id": 96,
+    "module": "Warunki techniczne",
+    "text": "Urządzenia aerodynamiczne powinny być eksploatowane tak, aby mogły być w każdym czasie (ze względów bezpieczeństwa):",
+    "choices": {
+      "A": "złożone, wsunięte albo zdjęte przez kierowcę",
+      "B": "zablokowane na stałe",
+      "C": "zdemontowane tylko w serwisie"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 19 pkt 5 Str. 8 PDF."
+  },
+  {
+    "id": 97,
+    "module": "Warunki techniczne",
+    "text": "Wymiary określone w §2 ust.1 pkt 1,3,4 i 6–8 nie obejmują również:",
+    "choices": {
+      "A": "platformy samozaładowczej",
+      "B": "rozstawu osi",
+      "C": "wysokości kabiny"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 3 Str. 7 PDF."
+  },
+  {
+    "id": 98,
+    "module": "Warunki techniczne",
+    "text": "Wymiary z §2 ust. 1 pkt 4 i ust. 6 mogą być przekroczone o 0,15 m w przypadku pojazdu członowego lub naczepy przewożących kontenery w intermodalu o maksymalnej długości do:",
+    "choices": {
+      "A": "45 stóp (13,72 m)",
+      "B": "40 stóp (12,19 m)",
+      "C": "53 stóp (16,15 m)"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 16 Str. 8 PDF."
+  },
+  {
+    "id": 99,
+    "module": "Warunki techniczne",
+    "text": "Przy sprawdzeniu wymagań §2 ust.1–16 dla pojazdu w ruchu drogowym podstawą są wartości rzeczywiste wymiarów, z uwzględnieniem:",
+    "choices": {
+      "A": "art. 61 ust. 6, 7 i 10 ustawy",
+      "B": "art. 66 ust. 1 ustawy",
+      "C": "art. 73 ust. 3 ustawy"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 17 Str. 8 PDF."
+  },
+  {
+    "id": 100,
+    "module": "Warunki techniczne",
+    "text": "Wśród paliw alternatywnych wymieniono energię mechaniczną z:",
+    "choices": {
+      "A": "akumulatorów pokładowych albo urządzeń pokładowych (w tym ciepło odpadowe)",
+      "B": "sprężonego powietrza wyłącznie",
+      "C": "silnika spalinowego"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 13 lit. f Str. 6 PDF."
+  },
+  {
+    "id": 101,
+    "module": "Warunki techniczne",
+    "text": "„Pojazd ciężki” w rozumieniu rozporządzenia obejmuje m.in. autobus przegubowy o:",
+    "choices": {
+      "A": "trzech osiach",
+      "B": "dwóch osiach",
+      "C": "czterech osiach"
+    },
+    "correct": "A",
+    "explanation": "§ 1 ust. 3 pkt 13c lit. c Str. 6 PDF."
+  },
+  {
+    "id": 102,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów złożonego z pojazdów mających łącznie co najmniej 5 osi wynosi 40 t, z wyjątkiem intermodal, gdzie dla ciągnika 2 osie + naczepa 3 osie może wynosić:",
+    "choices": {
+      "A": "42 t",
+      "B": "44 t",
+      "C": "46 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 2 lit. a Str. 9 PDF."
+  },
+  {
+    "id": 103,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów złożonego z pojazdów mających łącznie co najmniej 5 osi wynosi 40 t, z wyjątkiem intermodal, gdzie dla ciągnika 3 osie + naczepa 2/3 osie może wynosić:",
+    "choices": {
+      "A": "44 t",
+      "B": "42 t",
+      "C": "46 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1 pkt 2 lit. b Str. 9 PDF."
+  },
+  {
+    "id": 104,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów zasilanego paliwem alternatywnym (wskazanych w §3 ust.1 pkt 2,4,6) może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "1 t",
+      "B": "2 t",
+      "C": "0,5 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1a (paliwa alternatywne) Str. 10 PDF."
+  },
+  {
+    "id": 105,
+    "module": "Warunki techniczne",
+    "text": "DMC zespołu pojazdów bezemisyjnego (wskazanych w §3 ust.1 pkt 2,4,6) może zostać powiększona maksymalnie o:",
+    "choices": {
+      "A": "2 t",
+      "B": "1 t",
+      "C": "3 t"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1a (bezemisyjne) Str. 10 PDF."
+  },
+  {
+    "id": 106,
+    "module": "Warunki techniczne",
+    "text": "Adnotację o oznakowaniu „96/53/EC ARTICLE 9A COMPLIANT” umieszcza się m.in. w:",
+    "choices": {
+      "A": "świadectwie zgodności oraz dowodzie rejestracyjnym",
+      "B": "karcie pojazdu wyłącznie",
+      "C": "polisie OC"
+    },
+    "correct": "A",
+    "explanation": "§ 2 ust. 1a (zd. końcowe) Str. 10 PDF."
+  },
+  {
+    "id": 107,
+    "module": "Warunki techniczne",
+    "text": "Adnotację o dodatkowym oznakowaniu „96/53/EC ARTICLE 10B COMPLIANT – XXXX KG” umieszcza się także w:",
+    "choices": {
+      "A": "świadectwie zgodności oraz dowodzie rejestracyjnym",
+      "B": "tylko na tabliczce znamionowej",
+      "C": "tylko w CEPiK"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 1b Str. 10 PDF."
+  },
+  {
+    "id": 108,
+    "module": "Warunki techniczne",
+    "text": "Dopuszczalna masa całkowita pojazdu uczestniczącego w ruchu drogowym (weryfikacja §3) opiera się na:",
+    "choices": {
+      "A": "wartościach rzeczywistych mas",
+      "B": "wartościach z homologacji",
+      "C": "wartościach z polisy OC"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 3 Str. 8 PDF."
+  },
+  {
+    "id": 109,
+    "module": "Warunki techniczne",
+    "text": "Dopuszczalną masę całkowitą zespołu pojazdów uczestniczącego w ruchu drogowym ustala się dla ciągnika siodłowego z naczepą jako:",
+    "choices": {
+      "A": "sumę DMC ciągnika i naczepy pomniejszoną o wartość obciążenia sprzęgu/nacisku na siodło (wyższą)",
+      "B": "sumę DMC bez pomniejszeń",
+      "C": "DMC naczepy"
+    },
+    "correct": "A",
+    "explanation": "§ 3 ust. 4 pkt 3 Str. 10 PDF."
   }
 ]
