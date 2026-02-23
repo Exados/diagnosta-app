@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nauka – Diagnosta Samochodowy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+   <div class="brand">
+<h1>Diagnosta samochodowy - nauka i testy</h1>
+</div>
+    <nav class="tabs">
+      <button class="tab active" data-view="knowledge">BAZA WIEDZY</button>
+      <button class="tab" data-view="documents">DOKUMENTY</button>
+      <button class="tab" data-view="learn">NAUKA</button>
+      <button class="tab" data-view="test">TEST</button>
+      <button class="tab" data-view="add">DODAJ PYTANIE</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- BAZA WIEDZY -->
+    <section id="view-knowledge" class="view">
+      <h2>Baza wiedzy</h2>
+      <p class="muted">Tutaj znajdziesz wiedzę z różnych zagadnień niezbędną do zostania diagnostą!</p>
+      <div id="knowledgeList" class="cards"></div>
+    </section>
+    <!-- DOKUMENTY-->
+    <section id="view-documents" class="view hidden">
+  <h2>Dokumenty</h2>
+  <p class="muted">Kliknij dokument, aby zobaczyć przykład i opis.</p>
+  <div id="documentsList" class="cards"></div>
+</section>
+
+    <!-- NAUKA -->
+<section id="view-learn" class="view hidden">
+  <div class="viewHeader">
+    <h2>Nauka</h2>
+    <div class="row">
+      <label class="muted" for="learnModule">Moduł:</label>
+      <select id="learnModule" class="select"></select>
+    </div>
+  </div>
+
+  <div id="learnCard" class="card"></div>
+  <div style="margin-top:15px;">
+    <button id="learnNext" class="btn">Następne pytanie</button>
+  </div>
+</section>
+
+    <!-- TEST -->
+<section id="view-test" class="view hidden">
+  <div class="viewHeader">
+    <h2>Test (30 pytań)</h2>
+    <div class="row">
+      <label class="muted" for="testModule">Moduł:</label>
+      <select id="testModule" class="select"></select>
+
+      <button id="testStart" class="btn">Start</button>
+      <button id="testReset" class="btn secondary">Reset</button>
+    </div>
+  </div>
+
+  <div id="testMeta" class="muted"></div>
+
+  <div class="progressWrap">
+    <div id="testProgressBar" class="progressBar"></div>
+  </div>
+
+  <div id="testCard" class="card"></div>
+  <div id="testSummary" class="card hidden"></div>
+</section>
+    <section id="view-knowledge-topic" class="view hidden">
+  <div class="viewHeader">
+    <h2 id="ktTitle">Temat</h2>
+    <button id="ktBack" class="btn secondary">← Powrót</button>
+  </div>
+
+  <div id="ktBody" class="card"></div>
+</section>
+<section id="view-document-topic" class="view hidden">
+  <div class="viewHeader">
+    <h2 id="docTitle">Dokument</h2>
+    <button id="docBack" class="btn secondary">← Powrót</button>
+  </div>
+
+  <div class="card">
+    <div class="docLayout">
+      <div class="docImageWrap">
+        <div id="docImages" class="docImages"></div>
+      </div>
+
+      <div class="docText">
+        <h3 id="docName" style="margin-top:0;"></h3>
+        <p id="docExplain" class="muted"></p>
+        <div id="docDesc" class="docDesc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="view-add" class="view hidden">
+  <h2>Dodaj pytanie (generator JSON)</h2>
+  <p class="muted">Wypełnij pola → kliknij „Generuj” → skopiuj i wklej do <code>questions.json</code>.</p>
+
+  <div class="card">
+    <div class="row" style="flex-wrap:wrap">
+      <div style="min-width:180px; flex:1;">
+        <label class="muted" for="addId">ID</label><br>
+        <input id="addId" class="input" type="number" min="1" />
+      </div>
+
+      <div style="min-width:220px; flex:2;">
+        <label class="muted" for="addModule">Moduł</label><br>
+        <select id="addModule" class="select"></select>
+      </div>
+
+      <div style="min-width:220px; flex:2;">
+        <label class="muted" for="addModuleNew">…albo nowy moduł</label><br>
+        <input id="addModuleNew" class="input" placeholder="np. Oświetlenie" />
+      </div>
+    </div>
+
+    <div style="margin-top:12px;">
+      <label class="muted" for="addText">Treść pytania</label><br>
+      <textarea id="addText" class="textarea" rows="3" placeholder="Wpisz treść pytania..."></textarea>
+    </div>
+
+    <div class="row" style="margin-top:12px; flex-wrap:wrap">
+      <div style="min-width:240px; flex:1;">
+        <label class="muted" for="addA">A</label><br>
+        <input id="addA" class="input" placeholder="Odpowiedź A" />
+      </div>
+      <div style="min-width:240px; flex:1;">
+        <label class="muted" for="addB">B</label><br>
+        <input id="addB" class="input" placeholder="Odpowiedź B" />
+      </div>
+      <div style="min-width:240px; flex:1;">
+        <label class="muted" for="addC">C</label><br>
+        <input id="addC" class="input" placeholder="Odpowiedź C" />
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:12px; flex-wrap:wrap">
+      <div style="min-width:220px;">
+        <label class="muted" for="addCorrect">Poprawna</label><br>
+        <select id="addCorrect" class="select">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+
+      <div style="flex:1; min-width:280px;">
+        <label class="muted" for="addExplanation">Wyjaśnienie (opcjonalnie)</label><br>
+        <input id="addExplanation" class="input" placeholder="Krótkie wyjaśnienie..." />
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:14px; flex-wrap:wrap">
+      <button id="addGenerate" class="btn">Generuj JSON</button>
+      <button id="addCopy" class="btn secondary">Kopiuj</button>
+      <span id="addStatus" class="muted"></span>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px;">
+    <label class="muted" for="addOutput">Wygenerowany JSON (1 pytanie)</label><br>
+    <textarea id="addOutput" class="textarea" rows="10" readonly></textarea>
+    <p class="muted" style="margin-top:10px;">
+      Wklej ten obiekt do tablicy w <code>questions.json</code> (pamiętaj o przecinkach między elementami).
+    </p>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer muted">
+    <small>Wersja demo – pytania przykładowe.</small>
+  </footer>
+<!-- Prosty podgląd zdjęcia (klik -> fullscreen) -->
+<div id="imgModal" class="imgModal hidden" aria-hidden="true">
+  <div id="imgModalBackdrop" class="imgModalBackdrop"></div>
+  <img id="imgModalImage" class="imgModalImage" alt="Podgląd dokumentu" />
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

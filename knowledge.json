@@ -1,0 +1,48 @@
+[
+  {
+    "id": "badania-okresowe",
+    "title": "TERMINY BADAŃ OKRESOWYCH",
+    "html": "<p>Terminy badań okresowych – zestawienie:</p><div class='tableWrap'><table class='table'><thead><tr><th>Pojazd</th><th>Pierwsze</th><th>Drugie</th><th>Trzecie</th><th>4</th><th>5</th><th>6</th><th>Uwagi</th></tr></thead><tbody><tr><td>Samochód osobowy</td><td>3 lata</td><td>2 lata</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Taxi</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>LPG</td><td>3 lata</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>Zbiornik</td></tr><tr><td>Motocykl</td><td>3 lata</td><td>2 lata</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Ciężarowy</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Autobus</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Przyczepa lekka</td><td>Brak</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Specjalny</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Zabytek</td><td>Jednorazowo</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Nauka jazdy</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Pojazd uprzywilejowany</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>ADR</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Rolniczy</td><td>3 lata</td><td>2 lata</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Ciągnik</td><td>3 lata</td><td>2 lata</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>1 rok</td><td>-</td></tr><tr><td>Inny</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>-</td></tr></tbody></table></div>"
+  },
+    {
+  "id": "uklad-hamulcowy-rozszerzony",
+  "title": "Układ hamulcowy – szczegółowa kontrola diagnostyczna",
+  "html": "<article class='article'><h3>1. Znaczenie układu hamulcowego</h3><p>Układ hamulcowy jest jednym z najważniejszych systemów bezpieczeństwa czynnego pojazdu. Jego zadaniem jest skuteczne zmniejszanie prędkości oraz zatrzymanie pojazdu w możliwie najkrótszym czasie, przy zachowaniu stabilności toru jazdy.</p><h3>2. Elementy podlegające kontroli</h3><ul><li>Tarcze i bębny hamulcowe – zużycie, pęknięcia, korozja</li><li>Klocki i szczęki – grubość okładziny</li><li>Przewody hamulcowe – wycieki, pęknięcia</li><li>Pompa hamulcowa – szczelność</li><li>Serwo hamulcowe – wspomaganie</li></ul><h3>3. Badanie skuteczności hamowania</h3><p>Podczas badania technicznego pojazd wjeżdża na stanowisko rolkowe. Diagnosta sprawdza siłę hamowania na każdej osi oraz różnice pomiędzy stroną lewą i prawą.</p><blockquote>Różnica sił hamowania na jednej osi nie może przekraczać dopuszczalnych wartości określonych w przepisach.</blockquote><h3>4. Najczęstsze nieprawidłowości</h3><ol><li>Nierównomierne hamowanie</li><li>Wycieki płynu hamulcowego</li><li>Korozja przewodów</li><li>Zapieczone zaciski</li></ol><h3>5. Wnioski dla diagnosty</h3><p>Diagnosta powinien zwrócić szczególną uwagę na skuteczność hamowania, symetrię działania oraz stan techniczny elementów. Każda poważna usterka w układzie hamulcowym skutkuje wynikiem negatywnym badania technicznego.</p></article>"
+},
+  {
+    "id": "uklad-hamulcowy",
+    "title": "Układ hamulcowy",
+    "body": "Układ hamulcowy odpowiada za zmniejszenie prędkości lub zatrzymanie pojazdu. Podczas badania technicznego sprawdzana jest skuteczność hamowania, równomierność działania, stan przewodów hamulcowych oraz wycieki płynu hamulcowego."
+  },
+  {
+    "id": "oswietlenie",
+    "title": "Oświetlenie pojazdu",
+    "body": "Diagnosta sprawdza działanie świateł mijania, drogowych, pozycyjnych, kierunkowskazów, świateł stop oraz przeciwmgłowych. Ważne jest prawidłowe ustawienie świateł mijania oraz zgodność barwy i homologacji."
+  },
+  {
+    "id": "diagnostyka-obd",
+    "title": "Diagnostyka OBD",
+    "body": "System OBD umożliwia odczyt kodów usterek zapisanych w sterowniku silnika. Podczas badania sprawdza się obecność błędów związanych z emisją spalin oraz poprawność działania systemu kontroli emisji."
+  },
+  {
+    "id": "zawieszenie",
+    "title": "Układ zawieszenia",
+    "body": "Kontrola obejmuje sprawdzenie luzów w zawieszeniu, stanu amortyzatorów, sprężyn oraz elementów gumowo-metalowych. Niesprawne zawieszenie wpływa na stabilność i bezpieczeństwo jazdy."
+  },
+  {
+    "id": "vin",
+    "title": "Numer VIN i identyfikacja pojazdu",
+    "body": "Numer VIN powinien być zgodny z dokumentami pojazdu. Diagnosta sprawdza jego czytelność, brak śladów ingerencji oraz zgodność danych identyfikacyjnych pojazdu z dowodem rejestracyjnym."
+  },
+  {
+    "id": "emisja-spalin",
+    "title": "Emisja spalin",
+    "body": "Badanie emisji spalin obejmuje pomiar zawartości CO, CO2, HC oraz współczynnika lambda. W pojazdach z silnikiem Diesla sprawdzana jest zadymienie spalin przy użyciu dymomierza."
+  },
+  {
+    "id": "tachograf",
+    "title": "Tachograf",
+    "body": "W pojazdach ciężarowych oraz autobusach sprawdza się legalizację i poprawność działania tachografu. Kontroli podlega również ważność kalibracji urządzenia."
+  }
+  
+]

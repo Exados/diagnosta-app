@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "module": "Przepisy",
+    "text": "Kiedy należy wykonać badanie okresowe pojazdu osobowego po pierwszej rejestracji?",
+    "choices": {
+      "A": "Po 1 roku, potem co rok",
+      "B": "Po 3 latach, potem po 2 latach, potem co rok",
+      "C": "Po 5 latach, potem co 2 lata"
+    },
+    "correct": "B",
+    "explanation": "Standardowo: 3 lata -> 2 lata -> co 1 rok (dla pojazdu osobowego)."
+  },
+  {
+    "id": 2,
+    "module": "Diagnostyka",
+    "text": "Co oznacza usterka zagrażająca bezpieczeństwu w badaniu technicznym?",
+    "choices": {
+      "A": "Nie ma wpływu na bezpieczeństwo, tylko na komfort",
+      "B": "Może mieć wpływ, ale pojazd może jechać bez ograniczeń",
+      "C": "Stwarza bezpośrednie zagrożenie dla bezpieczeństwa ruchu"
+    },
+    "correct": "C",
+    "explanation": "Usterka niebezpieczna = bezpośrednie zagrożenie."
+  },
+  {
+    "id": 3,
+    "module": "Diagnostyka",
+    "text": "Minimalna grubość bieżnika ?",
+    "choices": {
+      "A": "1.6mm",
+      "B": "3",
+      "C": "2"
+    },
+    "correct": "A",
+    "explanation": "Według ustawy 1.6mm"
+  },
+  {
+  "id": 4,
+  "module": "BUS100",
+  "text": "Liczba wyjść awaryjnych przy liczbie miejsc dla pasażerów nie większej niż 22 nie może być mniejsza niż ?",
+  "choices": {
+    "A": "2",
+    "B": "3",
+    "C": "4"
+  },
+  "correct": "B",
+  "explanation": "bo tak"
+}
+]
