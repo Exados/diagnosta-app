@@ -8,11 +8,13 @@
   </head>
   <body>
     <header class="topbar">
-      <div class="brand">
-        <h1>Diagnosta samochodowy - nauka i testy</h1>
-      </div>
+    <div class="brand">
+  <h1>Diagnosta samochodowy - nauka i testy</h1>
+  <div class="brandTag" title="Tryb PRO">DIAGNOSTA • PRO</div>
+</div>
       <nav class="tabs">
-        <button class="tab active" data-view="knowledge">BAZA WIEDZY</button>
+        <button class="tab active" data-view="home">START</button>
+        <button class="tab" data-view="knowledge">BAZA WIEDZY</button>
         <button class="tab" data-view="documents">DOKUMENTY</button>
         <button class="tab" data-view="learn">NAUKA</button>
         <button class="tab" data-view="openq">PYTANIA OPISOWE</button>
@@ -22,8 +24,52 @@
     </header>
 
     <main class="container">
+      
+      <!-- HOME -->
+      <section id="view-home" class="view">
+        <div class="card homeHero">
+          <h2 style="margin:0 0 8px 0;">Panel startowy</h2>
+          <p class="muted" style="margin:0;">
+            Wybierz tryb i działaj. To narzędzie ma Ci pomóc zdać egzamin diagnosty.
+          </p>
+        </div>
+
+        <h3 class="homeSectionTitle">Skróty</h3>
+
+        <div class="cards">
+          <button class="card homeCard" type="button" data-go="learn">
+            <h3 style="margin:0 0 6px 0;">Nauka</h3>
+            <p class="muted" style="margin:0;">Rozwiązuj bez limitu, z wyjaśnieniami.</p>
+          </button>
+
+          <button class="card homeCard" type="button" data-go="test">
+            <h3 style="margin:0 0 6px 0;">Test</h3>
+            <p class="muted" style="margin:0;">30 pytań, pasek postępu, wynik na końcu.</p>
+          </button>
+
+          <button class="card homeCard" type="button" data-go="documents">
+            <h3 style="margin:0 0 6px 0;">Dokumenty</h3>
+            <p class="muted" style="margin:0;">Wzory i opisy dokumentów (z podglądem).</p>
+          </button>
+
+          <button class="card homeCard" type="button" data-go="knowledge">
+            <h3 style="margin:0 0 6px 0;">Baza wiedzy</h3>
+            <p class="muted" style="margin:0;">Skróty, tabelki, najważniejsze zasady.</p>
+          </button>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h3 style="margin-top:0;">Szybki start</h3>
+          <ol style="margin:0 0 0 18px; color: var(--muted); line-height:1.7;">
+            <li>Wejdź w <b>Nauka</b> i przerób jeden moduł dziennie.</li>
+            <li>Rób <b>Test</b> na koniec dnia i sprawdź wynik.</li>
+            <li>W <b>Dokumentach</b> zapamiętaj pola DR i zaświadczeń.</li>
+          </ol>
+        </div>
+      </section>
+
       <!-- BAZA WIEDZY -->
-      <section id="view-knowledge" class="view">
+      <section id="view-knowledge" class="view hidden">
         <h2>Baza wiedzy</h2>
         <p class="muted">
           Tutaj znajdziesz wiedzę z różnych zagadnień niezbędną do zostania

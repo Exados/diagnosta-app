@@ -190,8 +190,17 @@ function setView(view) {
   if (view === "add") initAddTool();
   if (view === "documents") renderDocuments();
   if (view === "openq") renderOpenQ();
-}
+  if (view === "home") renderHome();
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function renderHome() {
+  document.querySelectorAll("[data-go]").forEach((btn) => {
+    const clone = btn.cloneNode(true);
+    btn.parentNode.replaceChild(clone, btn);
+    clone.addEventListener("click", () => setView(clone.dataset.go));
+  });
+}
 // ==============================
 // BAZA WIEDZY
 // ==============================
@@ -213,9 +222,12 @@ function renderKnowledge() {
     el.type = "button";
     el.className = "knowledgeItem";
     el.innerHTML = `
-      <h3 style="margin:0 0 6px 0;">${escapeHtml(k.title || "")}</h3>
-      <p class="muted" style="margin:0;">Kliknij, aby otworzyć</p>
-    `;
+  <div class="kSimple">
+    <h3 class="kSimpleTitle">
+      ${escapeHtml(k.title || "")}
+    </h3>
+  </div>
+`;
     el.addEventListener("click", () => openKnowledgeTopic(id));
     host.appendChild(el);
   });
@@ -246,12 +258,18 @@ function openKnowledgeTopic(id) {
 
   // Jeżeli temat ma HTML (np. tabelkę), renderujemy bez escape
   if (topic.html) {
-    $("#ktBody").innerHTML = topic.html;
+    $("#ktBody").innerHTML = `
+  <div class="knowledgeContent">
+    ${topic.html}
+  </div>
+`;
   } else {
     $("#ktBody").innerHTML = `
-      <h3 style="margin-top:0;">${escapeHtml(topic.title || "")}</h3>
-      <p class="muted">${escapeHtml(topic.body || "")}</p>
-    `;
+  <div class="knowledgeContent">
+    <h3 style="margin-top:0;">${escapeHtml(topic.title || "")}</h3>
+    <p class="muted">${escapeHtml(topic.body || "")}</p>
+  </div>
+`;
   }
 
   // powrót
@@ -877,7 +895,7 @@ function initAutoHideHeader() {
 (function start() {
   loadData()
     .then(() => {
-      setView("knowledge");
+      setView("home");
       initAutoHideHeader();
       initImageModal();
     })

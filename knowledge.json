@@ -10,9 +10,9 @@
     "html": "<article class='article'><h3>1. Znaczenie układu hamulcowego</h3><p>Układ hamulcowy jest jednym z najważniejszych systemów bezpieczeństwa czynnego pojazdu. Jego zadaniem jest skuteczne zmniejszanie prędkości oraz zatrzymanie pojazdu w możliwie najkrótszym czasie, przy zachowaniu stabilności toru jazdy.</p><h3>2. Elementy podlegające kontroli</h3><ul><li>Tarcze i bębny hamulcowe – zużycie, pęknięcia, korozja</li><li>Klocki i szczęki – grubość okładziny</li><li>Przewody hamulcowe – wycieki, pęknięcia</li><li>Pompa hamulcowa – szczelność</li><li>Serwo hamulcowe – wspomaganie</li></ul><h3>3. Badanie skuteczności hamowania</h3><p>Podczas badania technicznego pojazd wjeżdża na stanowisko rolkowe. Diagnosta sprawdza siłę hamowania na każdej osi oraz różnice pomiędzy stroną lewą i prawą.</p><blockquote>Różnica sił hamowania na jednej osi nie może przekraczać dopuszczalnych wartości określonych w przepisach.</blockquote><h3>4. Najczęstsze nieprawidłowości</h3><ol><li>Nierównomierne hamowanie</li><li>Wycieki płynu hamulcowego</li><li>Korozja przewodów</li><li>Zapieczone zaciski</li></ol><h3>5. Wnioski dla diagnosty</h3><p>Diagnosta powinien zwrócić szczególną uwagę na skuteczność hamowania, symetrię działania oraz stan techniczny elementów. Każda poważna usterka w układzie hamulcowym skutkuje wynikiem negatywnym badania technicznego.</p></article>"
   },
   {
-    "id": "uklad-hamulcowy",
+    "id": "hamulce",
     "title": "Układ hamulcowy",
-    "body": "Układ hamulcowy odpowiada za zmniejszenie prędkości lub zatrzymanie pojazdu. Podczas badania technicznego sprawdzana jest skuteczność hamowania, równomierność działania, stan przewodów hamulcowych oraz wycieki płynu hamulcowego."
+    "html": "<h3>Zakres kontroli</h3>\n\n<ul class='knowledgeChecklist'>\n  <li>Sprawdzenie skuteczności hamowania</li>\n  <li>Ocena równomierności sił</li>\n  <li>Kontrola przewodów</li>\n</ul>\n\n<div class='knowledgeBox'>\n  Na egzaminie często pytają o różnicę między hamulcem postojowym a roboczym.\n</div>\n\n<div class='knowledgeWarning'>\n  Uwaga: Wycieki płynu hamulcowego = wynik negatywny.\n</div>"
   },
   {
     "id": "oswietlenie",
